@@ -1,0 +1,28 @@
+android_app {
+    name: "SleepAudio",
+    srcs: ["src/main/java/**/*.java"],
+    resource_dirs: ["res"],
+    
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+    privileged: true,
+    
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "androidx.appcompat_appcompat",
+        "com.google.android.material_material",
+        "SettingsLib",
+    ],
+    
+    required: ["privapp_whitelist_org.lineageos.sleepaudio"],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_org.lineageos.sleepaudio",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-sleepaudio.xml",
+    filename_from_src: true,
+}

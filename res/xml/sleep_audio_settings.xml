@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto"
+    android:title="@string/app_name">
+
+    <SwitchPreference
+        android:key="sleep_audio_enable"
+        android:title="Use SleepAudio"
+        android:defaultValue="false" />
+
+    <ListPreference
+        android:key="sleep_audio_profile"
+        android:title="Sound Profile"
+        android:entries="@array/profile_entries"
+        android:entryValues="@array/profile_values"
+        android:defaultValue="0"
+        android:dependency="sleep_audio_enable" />
+
+    <PreferenceCategory
+        android:title="Enhancements"
+        android:dependency="sleep_audio_enable">
+
+        <SwitchPreference
+            android:key="sleep_audio_bass"
+            android:title="Bass Enhancer"
+            android:summary="Deep, punchy bass response"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="sleep_audio_dialogue"
+            android:title="Dialogue Enhancer"
+            android:summary="Clarify speech in movies"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="sleep_audio_volume"
+            android:title="Volume Leveler"
+            android:summary="Consistent volume across content"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

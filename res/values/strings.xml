@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SleepAudio</string>
+    <string name="profile_music">Music Mode</string>
+    <string name="profile_game">Gaming Mode</string>
+    <string name="profile_sleep">Sleep Mode</string>
+</resources>

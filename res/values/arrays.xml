@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="profile_entries">
+        <item>Dynamic</item>
+        <item>Music</item>
+        <item>Movie</item>
+        <item>Game</item>
+    </string-array>
+
+    <string-array name="profile_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>
