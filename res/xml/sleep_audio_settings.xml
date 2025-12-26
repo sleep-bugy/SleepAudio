@@ -21,6 +21,12 @@
         android:dependency="sleep_audio_enable">
 
         <SwitchPreference
+            android:key="sleep_audio_virtualizer"
+            android:title="Spatial Surround"
+            android:summary="Expands soundstage (Virtualizer)"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="sleep_audio_bass"
             android:title="Bass Enhancer"
             android:summary="Deep, punchy bass response"

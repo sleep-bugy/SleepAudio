@@ -20,12 +20,15 @@ import androidx.preference.PreferenceManager;
 import org.lineageos.sleepaudio.R;
 import org.lineageos.sleepaudio.utils.Constants;
 
+import android.media.audiofx.Virtualizer;
+
 public class AudioService extends Service implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final int GLOBAL_SESSION_ID = 0;
     
     private SharedPreferences mPrefs;
-    private DynamicsProcessing mEffect;
+    private DynamicsProcessing mDynamicsProcessing; // Renamed for clarity
+    private Virtualizer mVirtualizer; // Standard Virtualizer
     private boolean mIsRunning = false;
 
     @Override
@@ -42,15 +45,15 @@ public class AudioService extends Service implements SharedPreferences.OnSharedP
             startForeground(1, createNotification());
             mIsRunning = true;
         }
-        // Force re-init on start
-        initEngine();
+        // Delayed init to let other heavy audio mods (Viper/Dolby) settle first
+        new android.os.Handler().postDelayed(this::initEngine, 2000);
         return START_STICKY;
     }
 
     @Override
     public void onDestroy() {
         mPrefs.unregisterOnSharedPreferenceChangeListener(this);
-        releaseEffect();
+        releaseEffects();
         super.onDestroy();
     }
 
@@ -74,53 +77,85 @@ public class AudioService extends Service implements SharedPreferences.OnSharedP
                 .build();
     }
 
-    private void initEngine() {
+    private synchronized void initEngine() {
         if (!mPrefs.getBoolean(Constants.KEY_ENABLE, false)) {
-            releaseEffect();
+            releaseEffects();
             return;
         }
 
-        if (mEffect == null) {
-            try {
-                // Advanced Config: 2 Channels, PreEq, MBC (Bass), PostEq (Tone), Limiter (Volume)
+        try {
+            // 1. DynamicsProcessing (Bass, EQ, Limiter)
+            if (mDynamicsProcessing == null) {
                 Config.Builder builder = new Config.Builder(
                         Config.VARIANT_FAVOR_FREQUENCY_RESOLUTION,
-                        2, // Stereo
-                        true,  // PreEq: Used for broad tone shaping
-                        true,  // MBC: Used for Dynamic Bass Boost
-                        true,  // PostEq: Used for Graphic EQ
-                        true   // Limiter: Used for Volume Leveling
+                        2, true, true, true, true
                 );
-                
                 builder.setPreferredFrameDuration(10.0f);
-                
-                // Configure Bands
-                // MBC: 2 Bands (Low for Bass, High for rest)
                 builder.setMbcBandCount(2); 
-                // PostEq: 10 Bands (Graphic Equalizer)
                 builder.setPostEqBandCount(10);
                 
-                mEffect = new DynamicsProcessing(0, GLOBAL_SESSION_ID, builder.build());
-                mEffect.setEnabled(true);
-                Log.i(Constants.TAG, "SleepAudio Engine Started");
-                
-            } catch (Exception e) {
-                Log.e(Constants.TAG, "Engine start failed", e);
-                return;
+                // Priority 0 to minimize conflict with Viper (usually high priority)
+                mDynamicsProcessing = new DynamicsProcessing(0, GLOBAL_SESSION_ID, builder.build());
+                mDynamicsProcessing.setEnabled(true);
             }
+
+            // 2. Virtualizer (Surround)
+            if (mVirtualizer == null) {
+                // Try creating Virtualizer safe-guarded
+                try {
+                    mVirtualizer = new Virtualizer(0, GLOBAL_SESSION_ID);
+                    mVirtualizer.setEnabled(true);
+                } catch (Exception e) {
+                    Log.w(Constants.TAG, "Virtualizer not supported or conflicted: " + e.getMessage());
+                }
+            }
+            
+            Log.i(Constants.TAG, "SleepAudio Engine Started");
+            applyAllSettings();
+            
+        } catch (Exception e) {
+            Log.e(Constants.TAG, "Critical: Engine start failed", e);
+            releaseEffects(); // Fail safe
         }
-        
-        applyAllSettings();
     }
 
     private void applyAllSettings() {
-        if (mEffect == null) return;
+        applyDynamicsProcessing();
+        applyVirtualizer();
+    }
+    
+    private void applyVirtualizer() {
+        if (mVirtualizer == null) return;
+        boolean virtEnabled = mPrefs.getBoolean(Constants.KEY_VIRTUALIZER_ENABLE, false);
+        // int strength = mPrefs.getInt(Constants.KEY_VIRTUALIZER_STRENGTH, 50);
+        
+        if (virtEnabled) {
+             // Force strongest setting for now, or scaled
+             // Standard Virtualizer usually 0-1000
+             try {
+                if (mVirtualizer.getStrengthSupported()) {
+                    mVirtualizer.setStrength((short) 1000); 
+                }
+             } catch (IllegalStateException e) {
+                 // Ignore if released
+             }
+        } else {
+             try {
+                if (mVirtualizer.getStrengthSupported()) {
+                    mVirtualizer.setStrength((short) 0);
+                }
+             } catch (IllegalStateException e) {}
+        }
+    }
+
+    private void applyDynamicsProcessing() {
+        if (mDynamicsProcessing == null) return;
         
         // 1. Bass Enhancement (MBC Band 0)
         boolean bassEnabled = mPrefs.getBoolean(Constants.KEY_BASS_ENABLE, false);
         // int bassStrength = mPrefs.getInt(Constants.KEY_BASS_STRENGTH, 50); // Future usage
         
-        Mbc mbc = mEffect.getMbc();
+        Mbc mbc = mDynamicsProcessing.getMbc();
         if (mbc != null) {
             mbc.setEnabled(true);
             
@@ -147,13 +182,17 @@ public class AudioService extends Service implements SharedPreferences.OnSharedP
             highBand.setPostGain(0.0f);
             mbc.setBand(1, highBand);
             
-            mEffect.setMbc(mbc);
+            mDynamicsProcessing.setMbc(mbc);
         }
 
         // 2. Volume Leveler (Limiter)
         boolean volLeveler = mPrefs.getBoolean(Constants.KEY_VOLUME_LEVELER, false);
-        Limiter limiter = mEffect.getLimiter();
+        Limiter limiter = mDynamicsProcessing.getLimiter();
         if (limiter != null) {
+            boolean isHiFi = mPrefs.getInt(Constants.KEY_PROFILE, 0) == Constants.PROFILE_HIFI;
+            // Force disable limiter in Hi-Fi mode
+            if (isHiFi) volLeveler = false;
+            
             limiter.setEnabled(volLeveler);
             if (volLeveler) {
                 limiter.setAttackTime(1.0f);
@@ -162,20 +201,20 @@ public class AudioService extends Service implements SharedPreferences.OnSharedP
                 limiter.setRatio(10.0f);     // Hard limit
                 limiter.setPostGain(2.0f);   // Makeup gain
             }
-            mEffect.setLimiter(limiter);
+            mDynamicsProcessing.setLimiter(limiter);
         }
         
-        // 3. Dialogue Enhancer & Profile Tone (PostEq)
+        // 3. Dialogue & EQ
         applyProfileTone();
     }
     
     private void applyProfileTone() {
-        if (mEffect == null || mEffect.getPostEq() == null) return;
+        if (mDynamicsProcessing == null || mDynamicsProcessing.getPostEq() == null) return;
         
         int profile = mPrefs.getInt(Constants.KEY_PROFILE, Constants.PROFILE_DYNAMIC);
         boolean dialogue = mPrefs.getBoolean(Constants.KEY_DIALOGUE_ENABLE, false);
         
-        Eq postEq = mEffect.getPostEq();
+        Eq postEq = mDynamicsProcessing.getPostEq();
         postEq.setEnabled(true);
         int bandCount = postEq.getBandCount(); // Should be 10
         
@@ -192,6 +231,9 @@ public class AudioService extends Service implements SharedPreferences.OnSharedP
         } else if (profile == Constants.PROFILE_MOVIE) {
             // Cinematic: Boost Sub-bass and Treble for air
             gains[0] = 5.0f; gains[9] = 2.0f;
+        } else if (profile == Constants.PROFILE_HIFI) {
+             // Hi-Fi Logic: Pure flat with tiny air
+             gains[9] = 2.0f; 
         }
         
         if (dialogue) {
@@ -208,25 +250,57 @@ public class AudioService extends Service implements SharedPreferences.OnSharedP
             // 32, 64, 125, 250, 500, 1k, 2k, 4k, 8k, 16k
             float freq = 32.0f * (float)Math.pow(2, i);
             band.setCutoffFrequency(freq);
+            // Safety clamp
+            if (gains[i] > 10.0f) gains[i] = 10.0f;
+            if (gains[i] < -10.0f) gains[i] = -10.0f;
+            
             band.setGain(gains[i]);
             postEq.setBand(i, band);
         }
-        mEffect.setPostEq(postEq);
+        mDynamicsProcessing.setPostEq(postEq);
+    }
+    
+    private void applyBassBoost(boolean deep) {
+        // Legacy stub
+    }
+    
+    private void applyHiFi() {
+        // Handled in applyProfileTone and applyDynamicsProcessing
+    }
+    
+    private void applyWarmFilter() {
+        // Stub
+    }
+    
+    private void applyFootstepEnhancer() {
+         // Stub
+    }
+    
+    private void applyTrebleClarity() {
+        // Stub
     }
 
-    private void releaseEffect() {
-        if (mEffect != null) {
-            mEffect.release();
-            mEffect = null;
+    private void resetBands() {
+         // Stub
+    }
+
+    private void releaseEffects() {
+        if (mDynamicsProcessing != null) {
+            mDynamicsProcessing.release();
+            mDynamicsProcessing = null;
+        }
+        if (mVirtualizer != null) {
+            mVirtualizer.release();
+            mVirtualizer = null;
         }
     }
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (Constants.KEY_ENABLE.equals(key)) {
-            initEngine(); // Full re-init
+            initEngine(); 
         } else {
-            applyAllSettings(); // Update params
+            applyAllSettings();
         }
     }
 }
