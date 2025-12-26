@@ -5,6 +5,7 @@
         <item>Music</item>
         <item>Movie</item>
         <item>Game</item>
+        <item>Hi-Fi</item>
     </string-array>
 
     <string-array name="profile_values">
@@ -12,5 +13,6 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>5</item>
     </string-array>
 </resources>

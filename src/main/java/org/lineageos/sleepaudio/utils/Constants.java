@@ -13,7 +13,8 @@ public class Constants {
     public static final int PROFILE_MUSIC = 1;
     public static final int PROFILE_MOVIE = 2;
     public static final int PROFILE_GAME = 3;
-    public static final int PROFILE_CUSTOM = 4;
+    public static final int PROFILE_SLEEP = 4;
+    public static final int PROFILE_HIFI = 5;
 
     // Feature Toggles (Mimicking Dolby)
     public static final String KEY_VIRTUALIZER_ENABLE = "sleep_audio_virtualizer";
