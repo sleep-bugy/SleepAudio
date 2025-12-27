@@ -15,7 +15,8 @@ class SleepAudioController private constructor(private val context: Context) {
     private val globalSessionId = 0
     private var dynamicsProcessing: DynamicsProcessing? = null
     private var virtualizer: Virtualizer? = null
-    private val prefs: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+    private val audioManager = context.getSystemService(android.media.AudioManager::class.java)
+    private var currentDeviceType = 0 // 0: Speaker, 1: Headset/BT
 
     companion object {
         const val TAG = "SleepAudioController"
@@ -33,9 +34,14 @@ class SleepAudioController private constructor(private val context: Context) {
             releaseEffects()
             return
         }
+        
+        // Register Device Callback
+        audioManager.registerAudioDeviceCallback(deviceCallback, null)
+        refreshOutputDevice()
 
         try {
             if (dynamicsProcessing == null) {
+                // ... (Existing Init Logic) ...
                 val builder = Config.Builder(
                     Config.VARIANT_FAVOR_FREQUENCY_RESOLUTION,
                     2, true, true, true, true
@@ -49,8 +55,8 @@ class SleepAudioController private constructor(private val context: Context) {
                     enabled = true
                 }
             }
-
-            if (virtualizer == null) {
+            // ... (Virtualizer Init) ...
+             if (virtualizer == null) {
                 try {
                     virtualizer = Virtualizer(0, globalSessionId).apply {
                         enabled = true
@@ -59,8 +65,7 @@ class SleepAudioController private constructor(private val context: Context) {
                     Log.w(TAG, "Virtualizer init failed: ${e.message}")
                 }
             }
-            
-            // Initial Apply
+
             checkAndApplyAll()
             Log.i(TAG, "Engine Initialized")
 
@@ -70,8 +75,41 @@ class SleepAudioController private constructor(private val context: Context) {
         }
     }
 
+    private val deviceCallback = object : android.media.AudioDeviceCallback() {
+        override fun onAudioDevicesAdded(addedDevices: Array<android.media.AudioDeviceInfo>?) = refreshOutputDevice()
+        override fun onAudioDevicesRemoved(removedDevices: Array<android.media.AudioDeviceInfo>?) = refreshOutputDevice()
+    }
+
+    private fun refreshOutputDevice() {
+        val devices = audioManager.getDevices(android.media.AudioManager.GET_DEVICES_OUTPUTS)
+        var isHeadset = false
+        for (device in devices) {
+            val type = device.type
+            if (type == android.media.AudioDeviceInfo.TYPE_WIRED_HEADSET ||
+                type == android.media.AudioDeviceInfo.TYPE_WIRED_HEADPHONES ||
+                type == android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP) {
+                isHeadset = true
+                break
+            }
+        }
+        
+        val newType = if (isHeadset) 1 else 0
+        if (newType != currentDeviceType) {
+            currentDeviceType = newType
+            // Auto-Switch Profile Logic could go here
+            // For now, we just log. Future: loadProfile(currentDeviceType)
+            Log.d(TAG, "Audio Device Changed: ${if(isHeadset) "Headset" else "Speaker"}")
+            
+            // Re-apply to adjust for device (e.g. disable Virtualizer on speaker if desired)
+            checkAndApplyAll()
+        }
+    }
+
     fun checkAndApplyAll() {
         if (dynamicsProcessing == null) return
+        
+        // Safety: Disable Virtualizer on Speaker (common practice)
+        // val forceDisableVirt = currentDeviceType == 0 
         
         applyBass()
         applyVirtualizer()
