@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.7 (2025-12-27)
+
+**Major Update:**
+- Implemented proper SELinux policy injection at ROM level
+- Added support for Magisk, KernelSU, and APatch
+- Created sepolicy.rule for audio permissions
+- Added service.sh for boot persistence
+- Added post-fs-data.sh for early setup
+- Completely rewrote customize.sh with root solution detection
+
 ## v1.0.6 (2025-12-27)
 
 **Hotfix:**
