@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Audio Configuration Tweaks -->
+    
+    <!-- Ensure headset events are processed accurately for our Context Awareness -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+    
+    <!-- Enable Safe Volume logic (optional, good for Sleep profiles) -->
+    <bool name="config_safe_media_volume_enabled">true</bool>
+
+</resources>

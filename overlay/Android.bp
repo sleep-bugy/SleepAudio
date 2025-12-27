@@ -1,0 +1,12 @@
+//
+// SleepAudio Framework Overlay
+// Overrides system defaults to ensure best audio compatibility
+//
+
+runtime_resource_overlay {
+    name: "SleepAudioConfigOverlay",
+    theme: "SleepAudioConfig",
+    certificate: "platform",
+    sdk_version: "current",
+    product_specific: true,
+}

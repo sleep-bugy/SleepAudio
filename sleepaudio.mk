@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
 
 # 2. Configurations
 PRODUCT_PACKAGES += \
-    privapp_whitelist_org.lineageos.sleepaudio
+    privapp_whitelist_org.lineageos.sleepaudio \
+    SleepAudioConfigOverlay
 
 # 3. SEPolicy (If BOARD_VENDOR_SEPOLICY_DIRS is handled by device, 
 # typically we don't add strictly here unless it's a board config, 
