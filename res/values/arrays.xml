@@ -5,7 +5,9 @@
         <item>Music</item>
         <item>Movie</item>
         <item>Game</item>
+        <item>Sleep</item>
         <item>Hi-Fi</item>
+        <item>Custom (GEQ)</item>
     </string-array>
 
     <string-array name="profile_values">
@@ -13,6 +15,11 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
         <item>5</item>
+        <item>6</item>
     </string-array>
+    
+    <string name="app_name">SleepAudio</string>
+    <string name="eq_title">Equalizer Pro</string>
 </resources>
