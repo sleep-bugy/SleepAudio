@@ -3135,6 +3135,7 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id action_about
+id action_backup_restore
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -3169,6 +3170,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backup_list
 id band_freq
 id band_seek
 id band_value
@@ -3179,6 +3181,8 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn_export
+id btn_import
 id buttonPanel
 id cancel_button
 id center
@@ -3678,6 +3682,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_about
+layout activity_backup_restore
 layout activity_equalizer
 layout activity_main
 layout custom_dialog

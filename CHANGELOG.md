@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.0.5 (2025-12-27)
+
+**New Feature:**
+- Added Backup & Restore functionality
+- Export audio settings to JSON file (saved to Downloads/SleepAudio/)
+- Import settings from backup file
+- View and restore from previous backups
+- Accessible from menu → Backup & Restore
+
 ## v1.0.4 (2025-12-27)
 
 **Hotfix:**

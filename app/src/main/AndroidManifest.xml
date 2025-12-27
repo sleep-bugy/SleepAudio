@@ -10,13 +10,16 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
 
     <application
         android:label="@string/app_name"
         android:icon="@drawable/ic_launcher"
         android:theme="@style/Theme.SleepAudio"
         android:allowBackup="false"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true">
 
         <service
             android:name=".service.AudioService"
@@ -56,6 +59,13 @@
         <activity
             android:name=".ui.EqualizerActivity"
             android:label="@string/eq_title"
+            android:theme="@style/Theme.SleepAudio"
+            android:parentActivityName=".ui.MainActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.BackupRestoreActivity"
+            android:label="Backup &amp; Restore"
             android:theme="@style/Theme.SleepAudio"
             android:parentActivityName=".ui.MainActivity"
             android:exported="false" />

@@ -26,206 +26,232 @@
 16    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 16-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:12:5-77
 16-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:12:22-74
-17
-18    <permission
-18-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-19        android:name="org.lineageos.sleepaudio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-19-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-20        android:protectionLevel="signature" />
-20-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-21
-22    <uses-permission android:name="org.lineageos.sleepaudio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-22-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-22-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+17    <uses-permission
+17-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:13:5-107
+18        android:name="android.permission.READ_EXTERNAL_STORAGE"
+18-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:13:22-77
+19        android:maxSdkVersion="32" />
+19-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:13:78-104
+20    <uses-permission
+20-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:14:5-108
+21        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+21-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:14:22-78
+22        android:maxSdkVersion="32" />
+22-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:14:79-105
 23
-24    <application
-24-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:14:5-73:19
-25        android:allowBackup="false"
-25-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:18:9-36
-26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-27        android:extractNativeLibs="false"
-28        android:icon="@drawable/ic_launcher"
-28-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:16:9-45
-29        android:label="@string/app_name"
-29-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:15:9-41
-30        android:supportsRtl="true"
-30-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:19:9-35
-31        android:theme="@style/Theme.SleepAudio" >
-31-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:17:9-48
-32        <service
-32-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:21:9-25:61
-33            android:name="org.lineageos.sleepaudio.service.AudioService"
-33-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:22:13-49
-34            android:enabled="true"
-34-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:23:13-35
-35            android:exported="false"
-35-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:24:13-37
-36            android:foregroundServiceType="mediaPlayback" />
-36-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:25:13-58
-37        <service
-37-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:27:9-36:19
-38            android:name="org.lineageos.sleepaudio.ui.SleepAudioTileService"
-38-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:28:13-53
-39            android:exported="true"
-39-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:32:13-36
-40            android:icon="@drawable/ic_qs_tile"
-40-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:30:13-48
-41            android:label="@string/app_name"
-41-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:29:13-45
-42            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
-42-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:31:13-77
-43            <intent-filter>
-43-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:33:13-35:29
-44                <action android:name="android.service.quicksettings.action.QS_TILE" />
-44-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:34:17-87
-44-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:34:25-84
-45            </intent-filter>
-46        </service>
-47
-48        <activity
-48-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:38:9-47:20
-49            android:name="org.lineageos.sleepaudio.ui.MainActivity"
-49-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:39:13-44
-50            android:exported="true"
-50-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:41:13-36
-51            android:label="@string/app_name"
-51-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:40:13-45
-52            android:theme="@style/Theme.SleepAudio" >
-52-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:42:13-52
-53            <intent-filter>
-53-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:43:13-46:29
-54                <action android:name="android.intent.action.MAIN" />
-54-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:44:17-69
-54-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:44:25-66
-55
-56                <category android:name="android.intent.category.LAUNCHER" />
-56-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:45:17-77
-56-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:45:27-74
-57            </intent-filter>
-58        </activity>
-59        <activity
-59-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:49:9-54:40
-60            android:name="org.lineageos.sleepaudio.ui.AboutActivity"
-60-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:50:13-45
-61            android:exported="false"
-61-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:54:13-37
-62            android:label="About"
-62-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:51:13-34
-63            android:parentActivityName="org.lineageos.sleepaudio.ui.MainActivity"
-63-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:53:13-58
-64            android:theme="@style/Theme.SleepAudio" />
-64-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:52:13-52
-65        <activity
-65-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:56:9-61:40
-66            android:name="org.lineageos.sleepaudio.ui.EqualizerActivity"
-66-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:57:13-49
-67            android:exported="false"
-67-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:61:13-37
-68            android:label="@string/eq_title"
-68-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:58:13-45
-69            android:parentActivityName="org.lineageos.sleepaudio.ui.MainActivity"
-69-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:60:13-58
-70            android:theme="@style/Theme.SleepAudio" />
-70-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:59:13-52
-71
-72        <receiver
-72-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:63:9-71:20
-73            android:name="org.lineageos.sleepaudio.service.BootReceiver"
-73-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:64:13-49
-74            android:enabled="true"
-74-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:65:13-35
-75            android:exported="true" >
-75-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:66:13-36
-76            <intent-filter>
-76-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:67:13-70:29
-77                <action android:name="android.intent.action.BOOT_COMPLETED" />
-77-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:68:17-79
-77-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:68:25-76
-78                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-78-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:69:17-86
-78-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:69:25-83
-79            </intent-filter>
-80        </receiver>
-81
-82        <provider
-82-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-83            android:name="androidx.startup.InitializationProvider"
-83-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-84            android:authorities="org.lineageos.sleepaudio.androidx-startup"
-84-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-85            android:exported="false" >
-85-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-86            <meta-data
-86-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-87                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-87-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-88                android:value="androidx.startup" />
-88-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-89            <meta-data
-89-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mohammadadi/.gradle/caches/transforms-3/f27b7760ce9f8c6a5f8bb672bdc512e4/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
-90                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-90-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mohammadadi/.gradle/caches/transforms-3/f27b7760ce9f8c6a5f8bb672bdc512e4/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-91                android:value="androidx.startup" />
-91-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mohammadadi/.gradle/caches/transforms-3/f27b7760ce9f8c6a5f8bb672bdc512e4/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
-92            <meta-data
-92-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-93                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-93-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-94                android:value="androidx.startup" />
-94-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-95        </provider>
-96
-97        <uses-library
-97-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
-98            android:name="androidx.window.extensions"
-98-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
-99            android:required="false" />
-99-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
-100        <uses-library
-100-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
-101            android:name="androidx.window.sidecar"
-101-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
-102            android:required="false" />
-102-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
-103
-104        <receiver
-104-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-105            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-105-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-106            android:directBootAware="false"
-106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-107            android:enabled="true"
-107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-108            android:exported="true"
-108-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-109            android:permission="android.permission.DUMP" >
-109-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-110            <intent-filter>
-110-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-111                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-111-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-112            </intent-filter>
-113            <intent-filter>
-113-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-114                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-114-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-115            </intent-filter>
-116            <intent-filter>
-116-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-117                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-118            </intent-filter>
-119            <intent-filter>
-119-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-120                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-120-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-121            </intent-filter>
-122        </receiver>
-123    </application>
-124
-125</manifest>
+24    <permission
+24-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+25        android:name="org.lineageos.sleepaudio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+25-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+26        android:protectionLevel="signature" />
+26-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+27
+28    <uses-permission android:name="org.lineageos.sleepaudio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+28-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+28-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+29
+30    <application
+30-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:16:5-83:19
+31        android:allowBackup="false"
+31-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:20:9-36
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.12.0] /home/mohammadadi/.gradle/caches/transforms-3/073b30953a677e2a926c0f17065fa4c3/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+33        android:extractNativeLibs="false"
+34        android:icon="@drawable/ic_launcher"
+34-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:18:9-45
+35        android:label="@string/app_name"
+35-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:17:9-41
+36        android:requestLegacyExternalStorage="true"
+36-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:22:9-52
+37        android:supportsRtl="true"
+37-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:21:9-35
+38        android:theme="@style/Theme.SleepAudio" >
+38-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:19:9-48
+39        <service
+39-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:24:9-28:61
+40            android:name="org.lineageos.sleepaudio.service.AudioService"
+40-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:25:13-49
+41            android:enabled="true"
+41-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:26:13-35
+42            android:exported="false"
+42-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:27:13-37
+43            android:foregroundServiceType="mediaPlayback" />
+43-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:28:13-58
+44        <service
+44-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:30:9-39:19
+45            android:name="org.lineageos.sleepaudio.ui.SleepAudioTileService"
+45-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:31:13-53
+46            android:exported="true"
+46-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:35:13-36
+47            android:icon="@drawable/ic_qs_tile"
+47-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:33:13-48
+48            android:label="@string/app_name"
+48-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:32:13-45
+49            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
+49-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:34:13-77
+50            <intent-filter>
+50-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:36:13-38:29
+51                <action android:name="android.service.quicksettings.action.QS_TILE" />
+51-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:37:17-87
+51-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:37:25-84
+52            </intent-filter>
+53        </service>
+54
+55        <activity
+55-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:41:9-50:20
+56            android:name="org.lineageos.sleepaudio.ui.MainActivity"
+56-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:42:13-44
+57            android:exported="true"
+57-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:44:13-36
+58            android:label="@string/app_name"
+58-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:43:13-45
+59            android:theme="@style/Theme.SleepAudio" >
+59-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:45:13-52
+60            <intent-filter>
+60-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:46:13-49:29
+61                <action android:name="android.intent.action.MAIN" />
+61-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:47:17-69
+61-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:47:25-66
+62
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:48:17-77
+63-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:48:27-74
+64            </intent-filter>
+65        </activity>
+66        <activity
+66-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:52:9-57:40
+67            android:name="org.lineageos.sleepaudio.ui.AboutActivity"
+67-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:53:13-45
+68            android:exported="false"
+68-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:57:13-37
+69            android:label="About"
+69-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:54:13-34
+70            android:parentActivityName="org.lineageos.sleepaudio.ui.MainActivity"
+70-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:56:13-58
+71            android:theme="@style/Theme.SleepAudio" />
+71-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:55:13-52
+72        <activity
+72-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:59:9-64:40
+73            android:name="org.lineageos.sleepaudio.ui.EqualizerActivity"
+73-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:60:13-49
+74            android:exported="false"
+74-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:64:13-37
+75            android:label="@string/eq_title"
+75-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:61:13-45
+76            android:parentActivityName="org.lineageos.sleepaudio.ui.MainActivity"
+76-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:63:13-58
+77            android:theme="@style/Theme.SleepAudio" />
+77-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:62:13-52
+78        <activity
+78-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:66:9-71:40
+79            android:name="org.lineageos.sleepaudio.ui.BackupRestoreActivity"
+79-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:67:13-53
+80            android:exported="false"
+80-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:71:13-37
+81            android:label="Backup &amp; Restore"
+81-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:68:13-49
+82            android:parentActivityName="org.lineageos.sleepaudio.ui.MainActivity"
+82-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:70:13-58
+83            android:theme="@style/Theme.SleepAudio" />
+83-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:69:13-52
+84
+85        <receiver
+85-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:73:9-81:20
+86            android:name="org.lineageos.sleepaudio.service.BootReceiver"
+86-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:74:13-49
+87            android:enabled="true"
+87-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:75:13-35
+88            android:exported="true" >
+88-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:76:13-36
+89            <intent-filter>
+89-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:77:13-80:29
+90                <action android:name="android.intent.action.BOOT_COMPLETED" />
+90-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:78:17-79
+90-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:78:25-76
+91                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+91-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:79:17-86
+91-->/home/mohammadadi/SleepAudio/app/src/main/AndroidManifest.xml:79:25-83
+92            </intent-filter>
+93        </receiver>
+94
+95        <provider
+95-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+96            android:name="androidx.startup.InitializationProvider"
+96-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+97            android:authorities="org.lineageos.sleepaudio.androidx-startup"
+97-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+98            android:exported="false" >
+98-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+99            <meta-data
+99-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+100-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+101                android:value="androidx.startup" />
+101-->[androidx.emoji2:emoji2:1.2.0] /home/mohammadadi/.gradle/caches/transforms-3/f94272bad156f86ff26e124ccf6ddba0/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+102            <meta-data
+102-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mohammadadi/.gradle/caches/transforms-3/f27b7760ce9f8c6a5f8bb672bdc512e4/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+103-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mohammadadi/.gradle/caches/transforms-3/f27b7760ce9f8c6a5f8bb672bdc512e4/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+104                android:value="androidx.startup" />
+104-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/mohammadadi/.gradle/caches/transforms-3/f27b7760ce9f8c6a5f8bb672bdc512e4/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+105            <meta-data
+105-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+106                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+106-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+107                android:value="androidx.startup" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+108        </provider>
+109
+110        <uses-library
+110-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+111            android:name="androidx.window.extensions"
+111-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+112            android:required="false" />
+112-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+113        <uses-library
+113-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+114            android:name="androidx.window.sidecar"
+114-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+115            android:required="false" />
+115-->[androidx.window:window:1.0.0] /home/mohammadadi/.gradle/caches/transforms-3/e7e472baa200da086af4d981a7276384/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+116
+117        <receiver
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+118            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+119            android:directBootAware="false"
+119-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+120            android:enabled="true"
+120-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+121            android:exported="true"
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+122            android:permission="android.permission.DUMP" >
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+123            <intent-filter>
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+124                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+125            </intent-filter>
+126            <intent-filter>
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+127                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+128            </intent-filter>
+129            <intent-filter>
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+130                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+131            </intent-filter>
+132            <intent-filter>
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+133                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/mohammadadi/.gradle/caches/transforms-3/cd64bbac7c030e887ef4d9ca16abf10a/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+134            </intent-filter>
+135        </receiver>
+136    </application>
+137
+138</manifest>

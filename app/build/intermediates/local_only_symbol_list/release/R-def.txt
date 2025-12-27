@@ -19,9 +19,13 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_qs_tile
 id action_about
+id action_backup_restore
+id backup_list
 id band_freq
 id band_seek
 id band_value
+id btn_export
+id btn_import
 id content_frame
 id eq_container
 id perm_text
@@ -32,6 +36,7 @@ id status_text
 id toolbar
 id version_text
 layout activity_about
+layout activity_backup_restore
 layout activity_equalizer
 layout activity_main
 layout item_eq_band
