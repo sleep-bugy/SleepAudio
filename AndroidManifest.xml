@@ -46,6 +46,13 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.EqualizerActivity"
+            android:label="@string/eq_title"
+            android:theme="@style/Theme.SleepAudio"
+            android:parentActivityName=".ui.MainActivity"
+            android:exported="false" />
+
         <receiver
             android:name=".service.BootReceiver"
             android:enabled="true"

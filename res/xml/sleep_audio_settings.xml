@@ -16,6 +16,16 @@
         android:defaultValue="0"
         android:dependency="sleep_audio_enable" />
 
+    <Preference
+        android:key="sleep_audio_launch_eq"
+        android:title="Open Equalizer Pro"
+        android:summary="Fine-tune bands, bass, and surround"
+        android:dependency="sleep_audio_enable">
+        <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="org.lineageos.sleepaudio"
+                android:targetClass="org.lineageos.sleepaudio.ui.EqualizerActivity" />
+    </Preference>
+
     <PreferenceCategory
         android:title="Enhancements"
         android:dependency="sleep_audio_enable">
