@@ -29,8 +29,8 @@ class EqualizerActivity : AppCompatActivity() {
         val seekBass = findViewById<SeekBar>(R.id.seek_bass)
         seekBass.progress = prefs.getInt(Constants.KEY_BASS_STRENGTH, 50)
         seekBass.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(p0: SeekBar?, val: Int, p2: Boolean) {
-                controller.setBassStrength(val)
+            override fun onProgressChanged(p0: SeekBar?, progress: Int, p2: Boolean) {
+                controller.setBassStrength(progress)
             }
             override fun onStopTrackingTouch(p0: SeekBar?) {
                 prefs.edit().putInt(Constants.KEY_BASS_STRENGTH, p0?.progress ?: 50).apply()
@@ -41,8 +41,8 @@ class EqualizerActivity : AppCompatActivity() {
         val seekVirt = findViewById<SeekBar>(R.id.seek_virt)
         seekVirt.progress = prefs.getInt(Constants.KEY_VIRTUALIZER_STRENGTH, 25)
         seekVirt.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(p0: SeekBar?, val: Int, p2: Boolean) {
-                controller.setVirtualizerStrength(val)
+            override fun onProgressChanged(p0: SeekBar?, progress: Int, p2: Boolean) {
+                controller.setVirtualizerStrength(progress)
             }
             override fun onStopTrackingTouch(p0: SeekBar?) {
                 prefs.edit().putInt(Constants.KEY_VIRTUALIZER_STRENGTH, p0?.progress ?: 25).apply()
@@ -53,9 +53,9 @@ class EqualizerActivity : AppCompatActivity() {
         val seekDialog = findViewById<SeekBar>(R.id.seek_dialog)
         seekDialog.progress = prefs.getInt(Constants.KEY_DIALOGUE_AMOUNT, 50)
         seekDialog.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
-            override fun onProgressChanged(p0: SeekBar?, val: Int, p2: Boolean) {
+            override fun onProgressChanged(p0: SeekBar?, progress: Int, p2: Boolean) {
                 // Dialog uses complex recalc
-                prefs.edit().putInt(Constants.KEY_DIALOGUE_AMOUNT, val).apply()
+                prefs.edit().putInt(Constants.KEY_DIALOGUE_AMOUNT, progress).apply()
                 controller.checkAndApplyAll()
             }
         })
@@ -67,20 +67,29 @@ class EqualizerActivity : AppCompatActivity() {
 
         for (i in freqs.indices) {
             val view = layoutInflater.inflate(R.layout.item_eq_band, container, false)
-            val text = view.findViewById<TextView>(R.id.band_freq)
+            val textFreq = view.findViewById<TextView>(R.id.band_freq)
+            val textValue = view.findViewById<TextView>(R.id.band_value)
             val seek = view.findViewById<SeekBar>(R.id.band_seek)
             
-            text.text = "${freqs[i]} Hz"
+            textFreq.text = "${freqs[i]} Hz"
             
             // Read saved gain (stored as int * 10)
-            // Range: -150 to +150. Center at 150 for SeekBar (0-300)
             val savedGain = prefs.getInt("${Constants.KEY_GEQ_PREFIX}$i", 0)
             seek.progress = savedGain + 150
+            
+            // Initial Text
+            val dbVal = savedGain / 10.0f
+            textValue.text = "${if (dbVal > 0) "+" else ""}$dbVal dB"
 
             seek.setOnSeekBarChangeListener(object : SimpleSeekBarListener() {
                 override fun onProgressChanged(p0: SeekBar?, p1: Int, fromUser: Boolean) {
-                    if (!fromUser) return
                     val gain = p1 - 150 // Convert back to -150..150
+                    
+                    // Update Text
+                    val db = gain / 10.0f
+                    textValue.text = "${if (db > 0) "+" else ""}$db dB"
+                    
+                    if (!fromUser) return
                     controller.setGeqBand(i, gain)
                 }
                 

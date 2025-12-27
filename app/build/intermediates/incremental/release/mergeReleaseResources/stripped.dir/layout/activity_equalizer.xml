@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SleepAudio Pro"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            android:textColor="?android:attr/colorPrimary"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Features Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.Material3.CardView.Filled">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Enhancements"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Bass -->
+                <TextView android:text="Bass Punch" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <SeekBar
+                    android:id="@+id/seek_bass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Virtualizer -->
+                <TextView android:text="Spatial Surround" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <SeekBar
+                    android:id="@+id/seek_virt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"
+                    android:layout_marginBottom="12dp"/>
+                    
+                 <!-- Dialogue -->
+                <TextView android:text="Dialogue Clarity" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <SeekBar
+                    android:id="@+id/seek_dialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="100"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Equalizer Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.CardView.Filled">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:text="Graphic Equalizer"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- 10 Horizontal Sliders representing bands (Vertical requires custom view usually, using horizontal for simplicity but stacked) -->
+                <!-- Actually, let's use a horizontal scrollview with vertical seekbars if possible, but vertical seekbars are tricky in standard android without libs. 
+                     We will use simple horizontal seekbars for each band for now. It's clean. -->
+                
+                <LinearLayout android:id="@+id/eq_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Bands will be inflated dynamically -->
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>

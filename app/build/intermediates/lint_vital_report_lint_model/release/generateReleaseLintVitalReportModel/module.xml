@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/home/mohammadadi/SleepAudio/app"
+    name=":app"
+    type="APP"
+    maven="SleepAudio:app:"
+    agpVersion="8.2.0"
+    buildFolder="build"
+    bootClassPath="/home/mohammadadi/Android/Sdk/platforms/android-34/android.jar:/home/mohammadadi/Android/Sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

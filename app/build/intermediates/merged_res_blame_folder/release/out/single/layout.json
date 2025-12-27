@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/item_eq_band.xml",
+        "source": "org.lineageos.sleepaudio.app-main-41:/layout/item_eq_band.xml"
+    },
+    {
+        "merged": "org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/activity_main.xml",
+        "source": "org.lineageos.sleepaudio.app-main-41:/layout/activity_main.xml"
+    },
+    {
+        "merged": "org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/activity_about.xml",
+        "source": "org.lineageos.sleepaudio.app-main-41:/layout/activity_about.xml"
+    },
+    {
+        "merged": "org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/activity_equalizer.xml",
+        "source": "org.lineageos.sleepaudio.app-main-41:/layout/activity_equalizer.xml"
+    }
+]

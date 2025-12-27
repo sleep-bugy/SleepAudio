@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.SleepAudio" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Primary Brand Colors (Deep Violet/Blue for "Sleep" vibe) -->
+        <!-- Strictly Blue Theme (Killing Pink/Purple Defaults) -->
         <item name="colorPrimary">@color/brand_primary</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/brand_container</item>
-        <item name="colorOnPrimaryContainer">@color/brand_on_container</item>
+        <item name="colorPrimaryContainer">@color/premium_bg</item>
+        <item name="colorOnPrimaryContainer">@color/brand_primary</item>
+        <item name="android:colorBackground">@color/premium_bg</item>
+        <item name="colorSurface">@color/premium_bg</item>
+        <item name="colorOnSurface">@color/white</item>
         
-        <!-- UI Elements -->
+        <!-- Status Bar -->
         <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/premium_bg</item>
+        <item name="android:windowLightStatusBar">false</item> <!-- Dark Status Bar Icons -->
     </style>
 </resources>

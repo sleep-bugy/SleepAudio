@@ -38,6 +38,4 @@
         <item>6</item>
     </string-array>
     
-    <string name="app_name">SleepAudio</string>
-    <string name="eq_title">Equalizer Pro</string>
 </resources>

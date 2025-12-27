@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/mohammadadi/SleepAudio/app/src/main/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="main" generated-set="main$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/mohammadadi/SleepAudio/app/src/main/res"><file path="/home/mohammadadi/SleepAudio/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">SleepAudio</string><string name="profile_music">Music Mode</string><string name="profile_game">Gaming Mode</string><string name="profile_sleep">Sleep Mode</string><string name="eq_title">Equalizer Pro</string></file><file path="/home/mohammadadi/SleepAudio/app/src/main/res/values/arrays.xml" qualifiers=""><string-array name="reverb_entries">
+        <item>None</item>
+        <item>Small Room</item>
+        <item>Medium Room</item>
+        <item>Large Room</item>
+        <item>Concert Hall</item>
+        <item>Plate</item>
+    </string-array><string-array name="reverb_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array><string-array name="profile_entries">
+        <item>Dynamic</item>
+        <item>Music</item>
+        <item>Movie</item>
+        <item>Game</item>
+        <item>Sleep</item>
+        <item>Hi-Fi</item>
+        <item>Custom (GEQ)</item>
+    </string-array><string-array name="profile_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array></file><file path="/home/mohammadadi/SleepAudio/app/src/main/res/values/styles.xml" qualifiers=""><style name="Theme.SleepAudio" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/brand_primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/premium_bg</item>
+        <item name="colorOnPrimaryContainer">@color/brand_primary</item>
+        <item name="android:colorBackground">@color/premium_bg</item>
+        <item name="colorSurface">@color/premium_bg</item>
+        <item name="colorOnSurface">@color/white</item>
+        
+        
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/premium_bg</item>
+        <item name="android:windowLightStatusBar">false</item> 
+    </style></file><file path="/home/mohammadadi/SleepAudio/app/src/main/res/values/colors.xml" qualifiers=""><color name="brand_primary">#4A90E2</color><color name="brand_container">#D0E5FF</color><color name="brand_on_container">#003366</color><color name="white">#FFFFFF</color><color name="black">#000000</color><color name="premium_bg">#121418</color><color name="premium_accent">#64B5F6</color><color name="premium_gradient_start">#101216</color><color name="premium_gradient_end">#1C2430</color></file><file name="ic_qs_tile" path="/home/mohammadadi/SleepAudio/app/src/main/res/drawable/ic_qs_tile.xml" qualifiers="" type="drawable"/><file name="ic_launcher" path="/home/mohammadadi/SleepAudio/app/src/main/res/drawable/ic_launcher.xml" qualifiers="" type="drawable"/><file name="ic_launcher_background" path="/home/mohammadadi/SleepAudio/app/src/main/res/drawable/ic_launcher_background.xml" qualifiers="" type="drawable"/><file name="ic_launcher_foreground" path="/home/mohammadadi/SleepAudio/app/src/main/res/drawable/ic_launcher_foreground.xml" qualifiers="" type="drawable"/><file name="header_gradient" path="/home/mohammadadi/SleepAudio/app/src/main/res/drawable/header_gradient.xml" qualifiers="" type="drawable"/><file name="sleep_audio_settings" path="/home/mohammadadi/SleepAudio/app/src/main/res/xml/sleep_audio_settings.xml" qualifiers="" type="xml"/><file name="activity_main" path="/home/mohammadadi/SleepAudio/app/src/main/res/layout/activity_main.xml" qualifiers="" type="layout"/><file name="activity_equalizer" path="/home/mohammadadi/SleepAudio/app/src/main/res/layout/activity_equalizer.xml" qualifiers="" type="layout"/><file name="item_eq_band" path="/home/mohammadadi/SleepAudio/app/src/main/res/layout/item_eq_band.xml" qualifiers="" type="layout"/><file name="activity_about" path="/home/mohammadadi/SleepAudio/app/src/main/res/layout/activity_about.xml" qualifiers="" type="layout"/><file path="/home/mohammadadi/SleepAudio/app/src/main/res/values-night/colors.xml" qualifiers="night-v8"><color name="brand_primary">#D0BCFF</color><color name="brand_container">#4F378B</color><color name="brand_on_container">#EADDFF</color></file><file name="main_menu" path="/home/mohammadadi/SleepAudio/app/src/main/res/menu/main_menu.xml" qualifiers="" type="menu"/></source></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/mohammadadi/SleepAudio/app/src/release/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="release" generated-set="release$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/mohammadadi/SleepAudio/app/src/release/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/mohammadadi/SleepAudio/app/build/generated/res/resValues/release"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="generated" generated-set="generated$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/home/mohammadadi/SleepAudio/app/build/generated/res/resValues/release"/></dataSet><mergedItems/></merger>
