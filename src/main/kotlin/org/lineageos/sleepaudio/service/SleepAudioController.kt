@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.media.audiofx.DynamicsProcessing
 import android.media.audiofx.DynamicsProcessing.*
+import android.media.audiofx.PresetReverb
 import android.media.audiofx.Virtualizer
 import android.util.Log
 import androidx.preference.PreferenceManager
@@ -15,6 +16,7 @@ class SleepAudioController private constructor(private val context: Context) {
     private val globalSessionId = 0
     private var dynamicsProcessing: DynamicsProcessing? = null
     private var virtualizer: Virtualizer? = null
+    private var presetReverb: PresetReverb? = null
     private val audioManager = context.getSystemService(android.media.AudioManager::class.java)
     private var currentDeviceType = 0 // 0: Speaker, 1: Headset/BT
 
@@ -65,6 +67,16 @@ class SleepAudioController private constructor(private val context: Context) {
                     Log.w(TAG, "Virtualizer init failed: ${e.message}")
                 }
             }
+            
+            if (presetReverb == null) {
+                try {
+                    presetReverb = PresetReverb(0, globalSessionId).apply {
+                        enabled = true
+                    }
+                } catch (e: Exception) {
+                    Log.w(TAG, "Reverb init failed: ${e.message}")
+                }
+            }
 
             checkAndApplyAll()
             Log.i(TAG, "Engine Initialized")
@@ -113,8 +125,54 @@ class SleepAudioController private constructor(private val context: Context) {
         
         applyBass()
         applyVirtualizer()
-        applyVolumeLeveler()
+        applyReverb()
+        applyCompressor() // Replaces simple Volume Leveler
         applyEqAndTone()
+    }
+    
+    // --- Advanced Features ---
+    
+    private fun applyReverb() {
+        val reverb = presetReverb ?: return
+        val enabled = prefs.getBoolean(Constants.KEY_REVERB_ENABLE, false)
+        if (!enabled) {
+            reverb.enabled = false
+            return
+        }
+        
+        reverb.enabled = true
+        // Map 0-5 to PresetReverb Constants
+        // 0: None, 1: SmallRoom, 2: MedRoom, 3: LargeRoom, 4: Hall, 5: Plate
+        val preset = prefs.getString(Constants.KEY_REVERB_PRESET, "0")?.toShort() ?: 0
+        try {
+            if (preset > 0) {
+                 reverb.preset = preset 
+            } else {
+                 reverb.enabled = false
+            }
+        } catch (e: Exception) {}
+    }
+
+    private fun applyCompressor() {
+        // Advanced DRC implementing Limiter stage
+        val dp = dynamicsProcessing ?: return
+        val limiter = dp.limiter ?: return
+        val enabled = prefs.getBoolean(Constants.KEY_COMPRESSOR_ENABLE, false)
+        
+        limiter.enabled = enabled
+        if (enabled) {
+            val attack = prefs.getInt(Constants.KEY_COMPRESSOR_ATTACK, 50).toFloat() // ms
+            val release = prefs.getInt(Constants.KEY_COMPRESSOR_RELEASE, 500).toFloat() // ms
+            val ratio = prefs.getInt(Constants.KEY_COMPRESSOR_RATIO, 40) / 10.0f // stored x10
+            val threshold = prefs.getInt(Constants.KEY_COMPRESSOR_THRESHOLD, -10).toFloat() // dB
+            
+            limiter.attackTime = attack
+            limiter.releaseTime = release
+            limiter.ratio = ratio
+            limiter.threshold = threshold
+            limiter.postGain = 0.0f - threshold // Auto-makeup gain approximation
+        }
+        dp.limiter = limiter
     }
 
     // --- Realtime Setters ---

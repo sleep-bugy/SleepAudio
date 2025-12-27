@@ -34,4 +34,15 @@ object Constants {
     
     // Graphic Equalizer (GEQ) - 10 Bands
     const val KEY_GEQ_PREFIX = "sleep_audio_geq_band_"
+    
+    // Reverberation (Environmental Effects)
+    const val KEY_REVERB_ENABLE = "sleep_audio_reverb_enable"
+    const val KEY_REVERB_PRESET = "sleep_audio_reverb_preset" // 0: None, 1: SmallRoom, 2: MedRoom, 3: LargeRoom, 4: Hall, 5: Plate
+    
+    // Compressor (DRC)
+    const val KEY_COMPRESSOR_ENABLE = "sleep_audio_drc_enable"
+    const val KEY_COMPRESSOR_ATTACK = "sleep_audio_drc_attack" // 1 - 500 ms
+    const val KEY_COMPRESSOR_RELEASE = "sleep_audio_drc_release" // 60 - 5000 ms
+    const val KEY_COMPRESSOR_RATIO = "sleep_audio_drc_ratio" // 1.0 - 20.0 (x10 stored)
+    const val KEY_COMPRESSOR_THRESHOLD = "sleep_audio_drc_threshold" // -60 - 0 dB
 }
