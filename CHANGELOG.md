@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.2 (2025-12-28)
+
+**Critical Fix:**
+- Updated APK to version 2.0.1 (was showing old 1.0)
+- All preset and headphone detection features now available
+- Permission issues should be resolved
+
 ## v2.0.1 (2025-12-27)
 
 **Hotfix:**
