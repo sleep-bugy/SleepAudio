@@ -1,30 +1,29 @@
-# SleepAudio Changelog
+# Changelog
 
 ## v1.0 (2025-12-27)
 
-### Initial Release
+Initial release.
 
-**Features:**
-- ✅ Bass Boost with adjustable strength
-- ✅ Virtualizer (Spatial Surround)
-- ✅ 10-band Graphic Equalizer with dB indicators
-- ✅ Dialogue Enhancer
-- ✅ Volume Leveler
-- ✅ Concert Hall Effect (Reverb)
-- ✅ Dynamic Range Compressor (DRC)
-- ✅ Sleep Profile (Warm Audio Filter)
-- ✅ Quick Settings Tile
-- ✅ Auto-start service on toggle
-- ✅ Root/System requirement detection
+**What works:**
+- Bass boost & virtualizer
+- 10-band equalizer with dB values shown
+- Dialog enhancer, volume leveler
+- Reverb effects
+- Dynamic range compressor
+- Sleep mode (warm filter for night listening)
+- Quick settings tile
+- Auto-starts when you toggle it on
 
 **UI:**
-- ✅ Premium soft blue theme
-- ✅ Balanced layout with proper padding
-- ✅ About page with diagnostics
-- ✅ Collapsing toolbar header
+- Blue theme (no more purple)
+- Fixed alignment issues
+- About page shows if you have root access
 
-**Technical:**
-- ✅ Systemless Magisk/KernelSU module
-- ✅ Auto-update support via GitHub
-- ✅ DynamicsProcessing API (Session 0)
-- ✅ Signed release build
+**Installation:**
+- Systemless Magisk/KSU module
+- Auto-update from GitHub when new version drops
+
+**Known issues:**
+- Needs system app installation (root required)
+- No reboot needed after toggle, just reopen the app
+
