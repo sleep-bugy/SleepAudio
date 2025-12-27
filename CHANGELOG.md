@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.3 (2025-12-27)
+
+**Hotfix:**
+- Fixed critical permission issue that prevented root detection from working
+- Added missing MODIFY_AUDIO_SETTINGS_PRIVILEGED to Magisk module
+- Main toggle now properly enables when installed as system app
+- Audio effects can now modify global audio session
+
 ## v1.0.2 (2025-12-27)
 
 - Updated QS tile icon to match app launcher icon (cleaner minimal design)
