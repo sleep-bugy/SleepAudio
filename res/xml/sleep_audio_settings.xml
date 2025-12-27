@@ -54,6 +54,30 @@
             android:summary="Consistent volume across content"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="sleep_audio_reverb_enable"
+            android:title="Concert Hall Effect"
+            android:summary="Simulate environmental reverb"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="sleep_audio_reverb_preset"
+            android:title="Reverb Environment"
+            android:entries="@array/reverb_entries"
+            android:entryValues="@array/reverb_values"
+            android:dependency="sleep_audio_reverb_enable"
+            android:defaultValue="0" />
+
+        <PreferenceCategory
+            android:title="Dynamic Range Compressor (Pro)"
+            android:dependency="sleep_audio_enable">
+            
+            <SwitchPreference
+                android:key="sleep_audio_drc_enable"
+                android:title="Enable Compressor"
+                android:summary="Control dynamic range (Viper-style)"
+                android:defaultValue="false" />
+        </PreferenceCategory>
     </PreferenceCategory>
 
 </PreferenceScreen>
