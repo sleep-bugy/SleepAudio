@@ -1,7 +1,17 @@
+//
+// SleepAudio Master Build Configuration
+// Structure similar to hardware/vendor modules
+//
+
+soong_namespace {
+}
+
 android_app {
     name: "SleepAudio",
-    srcs: ["src/main/kotlin/**/*.kt"],
-    resource_dirs: ["res"],
+    
+    srcs: ["app/src/main/kotlin/**/*.kt"],
+    resource_dirs: ["app/res"],
+    manifest: "app/AndroidManifest.xml",
     
     certificate: "platform",
     platform_apis: true,
@@ -17,21 +27,29 @@ android_app {
         "kotlin-stdlib",
     ],
     
-    required: ["privapp_whitelist_org.lineageos.sleepaudio"],
+    required: [
+        "privapp_whitelist_org.lineageos.sleepaudio",
+        "sleepaudio_sepolicy",
+    ],
+    
+    optimize: {
+        enabled: true,
+        optimize: true,
+        shrink: true,
+    },
 }
 
+// Configs
 prebuilt_etc {
     name: "privapp_whitelist_org.lineageos.sleepaudio",
     product_specific: true,
     sub_dir: "permissions",
-    src: "privapp-permissions-sleepaudio.xml",
+    src: "configs/privapp-permissions-sleepaudio.xml",
     filename_from_src: true,
 }
 
-prebuilt_etc {
-    name: "privapp_whitelist_org.lineageos.sleepaudio",
-    system_ext_specific: true,
-    sub_dir: "permissions",
-    src: "privapp-permissions-sleepaudio.xml",
-    filename_from_src: true,
+// SEPolicy (Stubbed for structure, expands as needed)
+phony {
+    name: "sleepaudio_sepolicy",
+    required: [],
 }

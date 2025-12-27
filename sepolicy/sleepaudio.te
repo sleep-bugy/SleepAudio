@@ -1,0 +1,12 @@
+# SleepAudio SEPolicy Rules
+# Label: system_app (since it's a privileged app)
+
+# Allow interaction with audio HALs
+allow system_app audioserver_service:service_manager find;
+allow system_app audioserver:binder { call transfer };
+
+# Allow finding media services
+allow system_app mediaserver_service:service_manager find;
+
+# Allow reading audio props
+get_prop(system_app, audio_config_prop)
