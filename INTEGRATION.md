@@ -8,10 +8,20 @@ Move the entire `SleepAudio` folder to the `packages/apps/` directory in your RO
 **Path:** `packages/apps/SleepAudio/`
 
 ## 2. Build Integration (device.mk)
-Open your device's main makefile (usually `device/xiaomi/peridot/device.mk` or `peridot.mk`) and add `SleepAudio` to the `PRODUCT_PACKAGES` list.
+
+You have two options to add SleepAudio to your build:
+
+### Option A: The "Pro" Way (Recommended)
+Add this single line to your `device.mk` to inherit the configuration:
 
 ```makefile
-# SleepAudio Audio Enhancement
+$(call inherit-product, packages/apps/SleepAudio/sleepaudio.mk)
+```
+
+### Option B: The Manual Way
+Add `SleepAudio` directly to your `PRODUCT_PACKAGES` list:
+
+```makefile
 PRODUCT_PACKAGES += \
     SleepAudio
 ```
