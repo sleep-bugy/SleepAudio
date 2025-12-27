@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.6 (2025-12-27)
+
+**Hotfix:**
+- Fixed installation verification showing false errors
+- Improved customize.sh file detection
+
 ## v1.0.5 (2025-12-27)
 
 **New Feature:**
