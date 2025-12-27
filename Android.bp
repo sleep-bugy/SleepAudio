@@ -1,6 +1,6 @@
 android_app {
     name: "SleepAudio",
-    srcs: ["src/main/java/**/*.java"],
+    srcs: ["src/main/kotlin/**/*.kt"],
     resource_dirs: ["res"],
     
     certificate: "platform",
@@ -14,6 +14,7 @@ android_app {
         "androidx.appcompat_appcompat",
         "com.google.android.material_material",
         "SettingsLib",
+        "kotlin-stdlib",
     ],
     
     required: ["privapp_whitelist_org.lineageos.sleepaudio"],
