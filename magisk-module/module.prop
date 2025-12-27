@@ -1,7 +1,0 @@
-id=sleepaudio
-name=SleepAudio - Advanced Audio Engine
-version=1.0.3
-versionCode=4
-author=sleep-bugy
-description=Premium audio enhancement for Android. Provides Bass Boost, Virtualizer, Graphic Equalizer, and Dynamic Range Compression via DynamicsProcessing API. Requires privileged system permissions.
-updateJson=https://raw.githubusercontent.com/sleep-bugy/SleepAudio/SleepManager/update.json

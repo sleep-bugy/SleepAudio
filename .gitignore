@@ -8,3 +8,11 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Magisk module build directory (local only)
+magisk-module/
+
+# Build artifacts
+*.zip
+*.apk
+*.log

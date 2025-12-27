@@ -1,4 +1,0 @@
-SKIPmount=false
-PROPFILE=false
-POSTFSDATA=false
-LATESTARTSERVICE=false

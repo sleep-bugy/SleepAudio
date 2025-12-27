@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<permissions>
-    <privapp-permissions package="org.lineageos.sleepaudio">
-        <permission name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-        <permission name="android.permission.MODIFY_AUDIO_SETTINGS_PRIVILEGED"/>
-    </privapp-permissions>
-</permissions>
