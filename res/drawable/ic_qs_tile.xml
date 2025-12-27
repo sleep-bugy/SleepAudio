@@ -4,7 +4,14 @@
     android:viewportWidth="24"
     android:viewportHeight="24"
     android:tint="?attr/colorControlNormal">
-  <path
-      android:fillColor="@android:color/white"
-      android:pathData="M12,3v9.28c-0.47,-0.17 -0.97,-0.28 -1.5,-0.28C8.01,12 6,14.01 6,16.5S8.01,21 10.5,21c2.31,0 4.2,-1.75 4.45,-4H15V6h4V3h-7z"/>
+    
+    <!-- Moon Shape -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M9,2C7.95,2 6.95,2.16 6,2.46C10.06,3.73 13,7.52 13,12C13,16.48 10.06,20.27 6,21.54C6.95,21.84 7.95,22 9,22C14.52,22 19,17.52 19,12C19,6.48 14.52,2 9,2Z" />
+        
+    <!-- Sound Waves (Overlaying the dark side) -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M3.5,13H1.5v-2h2V13z M6.5,15.5h-2v-7h2V15.5z M9.5,18h-2V6h2V18z" />
 </vector>
