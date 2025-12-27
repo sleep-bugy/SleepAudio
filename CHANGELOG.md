@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.4 (2025-12-27)
+
+**Hotfix:**
+- Fixed SELinux context not being set for permission file
+- Added install verification to customize.sh
+- Improved module installation reliability for KernelSU
+
 ## v1.0.3 (2025-12-27)
 
 **Hotfix:**
