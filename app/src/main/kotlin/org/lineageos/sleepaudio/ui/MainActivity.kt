@@ -46,6 +46,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
         return when (item.itemId) {
+            R.id.action_presets -> {
+                startActivity(android.content.Intent(this, PresetsActivity::class.java))
+                true
+            }
             R.id.action_backup_restore -> {
                 startActivity(android.content.Intent(this, BackupRestoreActivity::class.java))
                 true

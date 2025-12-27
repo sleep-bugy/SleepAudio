@@ -1,5 +1,20 @@
 # Changelog
 
+## v2.0.0 (2025-12-27)
+
+**Major Release:**
+- Added Audio Preset Profiles system
+  - 6 built-in presets: Music, Movies, Gaming, Podcast, Bass Boost, Sleep
+  - Create and save custom presets
+  - One-tap preset switching
+- Added Headphone Detection & Auto-Enable
+  - Auto-detect wired and Bluetooth headphones
+  - Different presets for headphone vs speaker
+  - Auto-enable SleepAudio when headphones connected
+- UI improvements and new Presets management screen
+
+**Note**: Audio Visualizer deferred to v2.1
+
 ## v1.0.7 (2025-12-27)
 
 **Major Update:**

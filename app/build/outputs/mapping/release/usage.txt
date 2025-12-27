@@ -2437,7 +2437,19 @@ androidx.arch.core.executor.DefaultTaskExecutor$Api28Impl:
 androidx.arch.core.executor.TaskExecutor:
     public void executeOnMainThread(java.lang.Runnable)
 androidx.arch.core.util.Function
-androidx.cardview.R$attr
+androidx.cardview.R$attr:
+    public static int cardBackgroundColor
+    public static int cardCornerRadius
+    public static int cardElevation
+    public static int cardMaxElevation
+    public static int cardPreventCornerOverlap
+    public static int cardUseCompatPadding
+    public static int contentPadding
+    public static int contentPaddingBottom
+    public static int contentPaddingLeft
+    public static int contentPaddingRight
+    public static int contentPaddingTop
+    private void <init>()
 androidx.cardview.R$color:
     private void <init>()
 androidx.cardview.R$dimen:
@@ -2454,7 +2466,6 @@ androidx.cardview.R$styleable:
 androidx.cardview.R
 androidx.cardview.widget.CardView:
     public void <init>(android.content.Context)
-    public void <init>(android.content.Context,android.util.AttributeSet)
 androidx.cardview.widget.RoundRectDrawableWithShadow:
     private static final float SHADOW_MULTIPLIER
 androidx.collection.ArrayMap:
@@ -10892,7 +10903,6 @@ com.google.android.material.R$attr:
     public static int floatingActionButtonSmallStyle
     public static int floatingActionButtonSmallSurfaceStyle
     public static int floatingActionButtonSmallTertiaryStyle
-    public static int floatingActionButtonStyle
     public static int floatingActionButtonSurfaceStyle
     public static int floatingActionButtonTertiaryStyle
     public static int flow_firstHorizontalBias
@@ -11186,12 +11196,10 @@ com.google.android.material.R$attr:
     public static int motionDurationLong1
     public static int motionDurationLong3
     public static int motionDurationLong4
-    public static int motionDurationMedium1
     public static int motionDurationMedium3
     public static int motionEasingAccelerated
     public static int motionEasingDecelerated
     public static int motionEasingEmphasized
-    public static int motionEasingEmphasizedAccelerateInterpolator
     public static int motionEasingLinear
     public static int motionEasingStandard
     public static int motionEasingStandardAccelerateInterpolator
@@ -11632,10 +11640,6 @@ com.google.android.material.R$color:
     public static int design_fab_shadow_end_color
     public static int design_fab_shadow_mid_color
     public static int design_fab_shadow_start_color
-    public static int design_fab_stroke_end_inner_color
-    public static int design_fab_stroke_end_outer_color
-    public static int design_fab_stroke_top_inner_color
-    public static int design_fab_stroke_top_outer_color
     public static int design_icon_tint
     public static int design_snackbar_background_color
     public static int dim_foreground_disabled_material_dark
@@ -12431,8 +12435,6 @@ com.google.android.material.R$dimen:
     public static int design_fab_border_width
     public static int design_fab_elevation
     public static int design_fab_image_size
-    public static int design_fab_size_mini
-    public static int design_fab_size_normal
     public static int design_fab_translation_z_hovered_focused
     public static int design_fab_translation_z_pressed
     public static int design_navigation_elevation
@@ -12963,7 +12965,6 @@ com.google.android.material.R$dimen:
     public static int mtrl_extended_fab_translation_z_hovered_focused
     public static int mtrl_extended_fab_translation_z_pressed
     public static int mtrl_fab_elevation
-    public static int mtrl_fab_min_touch_target
     public static int mtrl_fab_translation_z_hovered_focused
     public static int mtrl_fab_translation_z_pressed
     public static int mtrl_high_ripple_default_alpha
@@ -13621,7 +13622,6 @@ com.google.android.material.R$integer:
     public static int m3_sys_shape_corner_large_corner_family
     public static int m3_sys_shape_corner_medium_corner_family
     public static int m3_sys_shape_corner_small_corner_family
-    public static int material_motion_duration_long_1
     public static int material_motion_duration_long_2
     public static int material_motion_duration_medium_1
     public static int material_motion_duration_medium_2
@@ -14691,7 +14691,6 @@ com.google.android.material.R$style:
     public static int Widget_Compat_NotificationActionContainer
     public static int Widget_Compat_NotificationActionText
     public static int Widget_Design_BottomNavigationView
-    public static int Widget_Design_FloatingActionButton
     public static int Widget_Design_NavigationView
     public static int Widget_Design_ScrimInsetsFrameLayout
     public static int Widget_Design_Snackbar
@@ -15648,23 +15647,8 @@ com.google.android.material.R$styleable:
     public static int ExtendedFloatingActionButton_hideMotionSpec
     public static int ExtendedFloatingActionButton_showMotionSpec
     public static int ExtendedFloatingActionButton_shrinkMotionSpec
-    public static int FloatingActionButton_android_enabled
-    public static int FloatingActionButton_backgroundTint
-    public static int FloatingActionButton_backgroundTintMode
-    public static int FloatingActionButton_borderWidth
-    public static int FloatingActionButton_elevation
-    public static int FloatingActionButton_ensureMinTouchTargetSize
-    public static int FloatingActionButton_fabCustomSize
-    public static int FloatingActionButton_fabSize
-    public static int FloatingActionButton_hideMotionSpec
-    public static int FloatingActionButton_hoveredFocusedTranslationZ
-    public static int FloatingActionButton_maxImageSize
-    public static int FloatingActionButton_pressedTranslationZ
-    public static int FloatingActionButton_rippleColor
     public static int FloatingActionButton_shapeAppearance
     public static int FloatingActionButton_shapeAppearanceOverlay
-    public static int FloatingActionButton_showMotionSpec
-    public static int FloatingActionButton_useCompatPadding
     public static int FlowLayout_itemSpacing
     public static int FlowLayout_lineSpacing
     public static int FontFamilyFont_android_font
@@ -16321,17 +16305,14 @@ com.google.android.material.animation.AnimationUtils:
     public void <init>()
 com.google.android.material.animation.AnimatorSetCompat:
     public void <init>()
-com.google.android.material.animation.ImageMatrixProperty
-com.google.android.material.animation.MatrixEvaluator
+com.google.android.material.animation.MatrixEvaluator:
+    public synthetic bridge java.lang.Object evaluate(float,java.lang.Object,java.lang.Object)
 com.google.android.material.animation.MotionSpec:
     private static final java.lang.String TAG
     private android.animation.PropertyValuesHolder[] clonePropertyValuesHolder(android.animation.PropertyValuesHolder[])
     public android.animation.ObjectAnimator getAnimator(java.lang.String,java.lang.Object,android.util.Property)
     public android.animation.PropertyValuesHolder[] getPropertyValues(java.lang.String)
     public boolean hasPropertyValues(java.lang.String)
-com.google.android.material.animation.TransformationCallback:
-    public abstract void onScaleChanged(android.view.View)
-    public abstract void onTranslationChanged(android.view.View)
 com.google.android.material.appbar.AppBarLayout$BaseBehavior$BaseDragCallback:
     public void <init>()
 com.google.android.material.appbar.AppBarLayout$BaseBehavior:
@@ -17267,13 +17248,14 @@ com.google.android.material.elevation.SurfaceColors
 com.google.android.material.expandable.ExpandableTransformationWidget
 com.google.android.material.expandable.ExpandableWidget:
     public abstract boolean setExpanded(boolean)
-com.google.android.material.expandable.ExpandableWidgetHelper
+com.google.android.material.expandable.ExpandableWidgetHelper:
+    public boolean setExpanded(boolean)
 com.google.android.material.floatingactionbutton.AnimatorTracker
 com.google.android.material.floatingactionbutton.BaseMotionStrategy$1
 com.google.android.material.floatingactionbutton.BaseMotionStrategy
-com.google.android.material.floatingactionbutton.BorderDrawable$1
-com.google.android.material.floatingactionbutton.BorderDrawable$BorderState
-com.google.android.material.floatingactionbutton.BorderDrawable
+com.google.android.material.floatingactionbutton.BorderDrawable:
+    private static final float DRAW_STROKE_WIDTH_MULTIPLE
+    public com.google.android.material.shape.ShapeAppearanceModel getShapeAppearanceModel()
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$1
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$2
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$3
@@ -17375,7 +17357,6 @@ com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton:
     public void shrink()
     public void shrink(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback)
     protected void silentlyUpdateTextColor(android.content.res.ColorStateList)
-com.google.android.material.floatingactionbutton.FloatingActionButton$1
 com.google.android.material.floatingactionbutton.FloatingActionButton$BaseBehavior:
     private static final boolean AUTO_HIDE_DEFAULT
     public boolean isAutoHideEnabled()
@@ -17387,135 +17368,47 @@ com.google.android.material.floatingactionbutton.FloatingActionButton$Behavior:
     public synthetic bridge void setInternalAutoHideListener(com.google.android.material.floatingactionbutton.FloatingActionButton$OnVisibilityChangedListener)
 com.google.android.material.floatingactionbutton.FloatingActionButton$OnVisibilityChangedListener:
     public void <init>()
-    public void onHidden(com.google.android.material.floatingactionbutton.FloatingActionButton)
-    public void onShown(com.google.android.material.floatingactionbutton.FloatingActionButton)
-com.google.android.material.floatingactionbutton.FloatingActionButton$ShadowDelegateImpl
+com.google.android.material.floatingactionbutton.FloatingActionButton$ShadowDelegateImpl:
+    public float getRadius()
 com.google.android.material.floatingactionbutton.FloatingActionButton$Size
-com.google.android.material.floatingactionbutton.FloatingActionButton$TransformationCallbackWrapper
 com.google.android.material.floatingactionbutton.FloatingActionButton:
     private static final int AUTO_MINI_LARGEST_SCREEN_WIDTH
-    private static final int DEF_STYLE_RES
     private static final java.lang.String EXPANDABLE_WIDGET_HELPER_KEY
     private static final java.lang.String LOG_TAG
     public static final int NO_CUSTOM_SIZE
     public static final int SIZE_AUTO
     public static final int SIZE_MINI
     public static final int SIZE_NORMAL
-    private android.content.res.ColorStateList backgroundTint
-    private android.graphics.PorterDuff$Mode backgroundTintMode
-    private int borderWidth
-    boolean compatPadding
-    private int customSize
-    private final com.google.android.material.expandable.ExpandableWidgetHelper expandableWidgetHelper
-    private final androidx.appcompat.widget.AppCompatImageHelper imageHelper
-    private android.graphics.PorterDuff$Mode imageMode
-    private int imagePadding
-    private android.content.res.ColorStateList imageTint
-    private com.google.android.material.floatingactionbutton.FloatingActionButtonImpl impl
-    private int maxImageSize
-    private android.content.res.ColorStateList rippleColor
-    private int size
-    private final android.graphics.Rect touchArea
-    static void <clinit>()
     public void <init>(android.content.Context)
-    public void <init>(android.content.Context,android.util.AttributeSet)
-    public void <init>(android.content.Context,android.util.AttributeSet,int)
-    static synthetic int access$000(com.google.android.material.floatingactionbutton.FloatingActionButton)
-    static synthetic void access$101(com.google.android.material.floatingactionbutton.FloatingActionButton,android.graphics.drawable.Drawable)
     public void clearCustomSize()
-    private com.google.android.material.floatingactionbutton.FloatingActionButtonImpl createImpl()
-    protected void drawableStateChanged()
-    public android.content.res.ColorStateList getBackgroundTintList()
-    public android.graphics.PorterDuff$Mode getBackgroundTintMode()
-    public androidx.coordinatorlayout.widget.CoordinatorLayout$Behavior getBehavior()
-    public float getCompatElevation()
-    public float getCompatHoveredFocusedTranslationZ()
-    public float getCompatPressedTranslationZ()
-    public android.graphics.drawable.Drawable getContentBackground()
-    public int getCustomSize()
-    private com.google.android.material.floatingactionbutton.FloatingActionButtonImpl getImpl()
-    public int getRippleColor()
-    public android.content.res.ColorStateList getRippleColorStateList()
-    public int getSize()
-    int getSizeDimension()
-    private int getSizeDimension(int)
-    public android.content.res.ColorStateList getSupportBackgroundTintList()
-    public android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
-    public android.content.res.ColorStateList getSupportImageTintList()
-    public android.graphics.PorterDuff$Mode getSupportImageTintMode()
-    private void getTouchTargetRect(android.graphics.Rect)
-    public boolean getUseCompatPadding()
     public void hide()
     public void hide(com.google.android.material.floatingactionbutton.FloatingActionButton$OnVisibilityChangedListener)
-    public boolean isExpanded()
     public boolean isOrWillBeHidden()
-    public void jumpDrawablesToCurrentState()
-    private void offsetRectWithShadow(android.graphics.Rect)
-    private void onApplySupportImageTint()
-    protected void onAttachedToWindow()
-    protected void onDetachedFromWindow()
-    protected void onMeasure(int,int)
-    protected void onRestoreInstanceState(android.os.Parcelable)
-    protected android.os.Parcelable onSaveInstanceState()
-    public boolean onTouchEvent(android.view.MotionEvent)
     public void removeOnHideAnimationListener(android.animation.Animator$AnimatorListener)
     public void removeOnShowAnimationListener(android.animation.Animator$AnimatorListener)
     public void removeTransformationCallback(com.google.android.material.animation.TransformationCallback)
-    public void setBackgroundColor(int)
-    public void setBackgroundDrawable(android.graphics.drawable.Drawable)
-    public void setBackgroundResource(int)
-    public void setBackgroundTintList(android.content.res.ColorStateList)
-    public void setBackgroundTintMode(android.graphics.PorterDuff$Mode)
-    public void setCompatElevationResource(int)
-    public void setCompatHoveredFocusedTranslationZ(float)
-    public void setCompatHoveredFocusedTranslationZResource(int)
-    public void setCompatPressedTranslationZ(float)
-    public void setCompatPressedTranslationZResource(int)
-    public void setCustomSize(int)
-    public void setElevation(float)
-    public void setEnsureMinTouchTargetSize(boolean)
     public boolean setExpanded(boolean)
-    public void setExpandedComponentIdHint(int)
-    public void setHideMotionSpec(com.google.android.material.animation.MotionSpec)
-    public void setImageDrawable(android.graphics.drawable.Drawable)
-    public void setImageResource(int)
-    public void setMaxImageSize(int)
-    public void setRippleColor(int)
-    public void setRippleColor(android.content.res.ColorStateList)
-    public void setScaleX(float)
-    public void setScaleY(float)
-    public void setShadowPaddingEnabled(boolean)
-    public void setShapeAppearanceModel(com.google.android.material.shape.ShapeAppearanceModel)
-    public void setShowMotionSpec(com.google.android.material.animation.MotionSpec)
-    public void setSize(int)
-    public void setSupportBackgroundTintList(android.content.res.ColorStateList)
-    public void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
-    public void setSupportImageTintList(android.content.res.ColorStateList)
-    public void setSupportImageTintMode(android.graphics.PorterDuff$Mode)
-    public void setTranslationY(float)
-    public void setTranslationZ(float)
-    public void setUseCompatPadding(boolean)
-    public void setVisibility(int)
     public boolean shouldEnsureMinTouchTargetSize()
     public void show()
     public void show(com.google.android.material.floatingactionbutton.FloatingActionButton$OnVisibilityChangedListener)
-    private com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$InternalVisibilityChangedListener wrapOnVisibilityChangedListener(com.google.android.material.floatingactionbutton.FloatingActionButton$OnVisibilityChangedListener)
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$1
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$2
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$3
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$4
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$5
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$6
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$DisabledElevationAnimation
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ElevateToHoveredFocusedTranslationZAnimation
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ElevateToPressedTranslationZAnimation
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$InternalTransformationCallback
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$InternalVisibilityChangedListener
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ResetElevationAnimation
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ShadowAnimatorImpl
-com.google.android.material.floatingactionbutton.FloatingActionButtonImpl
-com.google.android.material.floatingactionbutton.FloatingActionButtonImplLollipop$AlwaysStatefulMaterialShapeDrawable
-com.google.android.material.floatingactionbutton.FloatingActionButtonImplLollipop
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl:
+    static final int ANIM_STATE_HIDING
+    static final int ANIM_STATE_NONE
+    static final int ANIM_STATE_SHOWING
+    static final long ELEVATION_ANIM_DELAY
+    static final long ELEVATION_ANIM_DURATION
+    private static final float HIDE_ICON_SCALE
+    private static final float HIDE_OPACITY
+    private static final float HIDE_SCALE
+    static final float SHADOW_MULTIPLIER
+    private static final float SHOW_ICON_SCALE
+    private static final float SHOW_OPACITY
+    private static final float SHOW_SCALE
+    private static final float SPEC_HIDE_ICON_SCALE
+    private static final float SPEC_HIDE_SCALE
+    public void removeOnHideAnimationListener(android.animation.Animator$AnimatorListener)
+    void removeOnShowAnimationListener(android.animation.Animator$AnimatorListener)
+    void removeTransformationCallback(com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$InternalTransformationCallback)
 com.google.android.material.floatingactionbutton.MotionStrategy:
     public abstract void addAnimationListener(android.animation.Animator$AnimatorListener)
     public abstract com.google.android.material.animation.MotionSpec getCurrentMotionSpec()
@@ -17631,9 +17524,6 @@ com.google.android.material.internal.RectEvaluator
 com.google.android.material.internal.ReversableAnimatedValueInterpolator
 com.google.android.material.internal.ScrimInsetsFrameLayout$1
 com.google.android.material.internal.ScrimInsetsFrameLayout
-com.google.android.material.internal.StateListAnimator$1
-com.google.android.material.internal.StateListAnimator$Tuple
-com.google.android.material.internal.StateListAnimator
 com.google.android.material.internal.StaticLayoutBuilderCompat:
     static final float DEFAULT_LINE_SPACING_ADD
     static final float DEFAULT_LINE_SPACING_MULTIPLIER
@@ -17697,12 +17587,8 @@ com.google.android.material.internal.ViewUtils:
     public static void setBoundsFromRect(android.view.View,android.graphics.Rect)
     public static void showKeyboard(android.view.View)
 com.google.android.material.internal.VisibilityAwareImageButton:
-    private int userSetVisibility
     public void <init>(android.content.Context)
     public void <init>(android.content.Context,android.util.AttributeSet)
-    public void <init>(android.content.Context,android.util.AttributeSet,int)
-    public final void internalSetVisibility(int,boolean)
-    public void setVisibility(int)
 com.google.android.material.internal.WindowUtils$Api14Impl
 com.google.android.material.internal.WindowUtils$Api17Impl
 com.google.android.material.internal.WindowUtils$Api30Impl
@@ -18113,7 +17999,8 @@ com.google.android.material.shadow.ShadowRenderer:
     private static final int COLOR_ALPHA_MIDDLE
     private static final int COLOR_ALPHA_START
     public void drawInnerCornerShadow(android.graphics.Canvas,android.graphics.Matrix,android.graphics.RectF,int,float,float,float[])
-com.google.android.material.shadow.ShadowViewDelegate
+com.google.android.material.shadow.ShadowViewDelegate:
+    public abstract float getRadius()
 com.google.android.material.shape.AbsoluteCornerSize:
     public float getCornerSize()
 com.google.android.material.shape.ClampedCornerSize
@@ -18157,7 +18044,6 @@ com.google.android.material.shape.MaterialShapeDrawable:
     public void setEdgeIntersectionCheckEnable(boolean)
     public void setPaintStyle(android.graphics.Paint$Style)
     public void setScale(float)
-    public void setShadowCompatRotation(int)
     public void setShadowCompatibilityMode(int)
     public void setShadowElevation(int)
     public void setShadowEnabled(boolean)
@@ -18432,8 +18318,6 @@ com.google.android.material.snackbar.SnackbarManager:
     public void onShown(com.google.android.material.snackbar.SnackbarManager$Callback)
     public void show(int,com.google.android.material.snackbar.SnackbarManager$Callback)
     private void showNextSnackbarLocked()
-com.google.android.material.stateful.ExtendableSavedState$1
-com.google.android.material.stateful.ExtendableSavedState
 com.google.android.material.switchmaterial.SwitchMaterial
 com.google.android.material.tabs.ElasticTabIndicatorInterpolator
 com.google.android.material.tabs.FadeTabIndicatorInterpolator
@@ -21297,7 +21181,6 @@ kotlin.collections.CollectionsKt___CollectionsKt:
     public static final java.util.List plus(java.lang.Iterable,java.lang.Object)
     public static final java.util.List plus(java.lang.Iterable,kotlin.sequences.Sequence)
     public static final java.util.List plus(java.lang.Iterable,java.lang.Object[])
-    public static final java.util.List plus(java.util.Collection,java.lang.Iterable)
     public static final java.util.List plus(java.util.Collection,java.lang.Object)
     public static final java.util.List plus(java.util.Collection,kotlin.sequences.Sequence)
     public static final java.util.List plus(java.util.Collection,java.lang.Object[])
@@ -23357,9 +23240,7 @@ kotlin.text.StringsKt__StringsKt:
     public static final boolean contentEqualsIgnoreCaseImpl(java.lang.CharSequence,java.lang.CharSequence)
     public static final boolean contentEqualsImpl(java.lang.CharSequence,java.lang.CharSequence)
     public static final boolean endsWith(java.lang.CharSequence,char,boolean)
-    public static final boolean endsWith(java.lang.CharSequence,java.lang.CharSequence,boolean)
     public static synthetic boolean endsWith$default(java.lang.CharSequence,char,boolean,int,java.lang.Object)
-    public static synthetic boolean endsWith$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object)
     public static final kotlin.Pair findAnyOf(java.lang.CharSequence,java.util.Collection,int,boolean)
     private static final kotlin.Pair findAnyOf$StringsKt__StringsKt(java.lang.CharSequence,java.util.Collection,int,boolean,boolean)
     public static synthetic kotlin.Pair findAnyOf$default(java.lang.CharSequence,java.util.Collection,int,boolean,int,java.lang.Object)
@@ -23398,13 +23279,11 @@ kotlin.text.StringsKt__StringsKt:
     static synthetic kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt$default(java.lang.CharSequence,char[],int,boolean,int,int,java.lang.Object)
     static synthetic kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.String[],int,boolean,int,int,java.lang.Object)
     public static final java.lang.CharSequence removePrefix(java.lang.CharSequence,java.lang.CharSequence)
-    public static final java.lang.String removePrefix(java.lang.String,java.lang.CharSequence)
     public static final java.lang.CharSequence removeRange(java.lang.CharSequence,int,int)
     public static final java.lang.CharSequence removeRange(java.lang.CharSequence,kotlin.ranges.IntRange)
     private static final java.lang.String removeRange(java.lang.String,int,int)
     private static final java.lang.String removeRange(java.lang.String,kotlin.ranges.IntRange)
     public static final java.lang.CharSequence removeSuffix(java.lang.CharSequence,java.lang.CharSequence)
-    public static final java.lang.String removeSuffix(java.lang.String,java.lang.CharSequence)
     public static final java.lang.CharSequence removeSurrounding(java.lang.CharSequence,java.lang.CharSequence)
     public static final java.lang.CharSequence removeSurrounding(java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence)
     public static final java.lang.String removeSurrounding(java.lang.String,java.lang.CharSequence)
@@ -23450,10 +23329,8 @@ kotlin.text.StringsKt__StringsKt:
     public static synthetic kotlin.sequences.Sequence splitToSequence$default(java.lang.CharSequence,java.lang.String[],boolean,int,int,java.lang.Object)
     public static final boolean startsWith(java.lang.CharSequence,char,boolean)
     public static final boolean startsWith(java.lang.CharSequence,java.lang.CharSequence,int,boolean)
-    public static final boolean startsWith(java.lang.CharSequence,java.lang.CharSequence,boolean)
     public static synthetic boolean startsWith$default(java.lang.CharSequence,char,boolean,int,java.lang.Object)
     public static synthetic boolean startsWith$default(java.lang.CharSequence,java.lang.CharSequence,int,boolean,int,java.lang.Object)
-    public static synthetic boolean startsWith$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object)
     public static final java.lang.CharSequence subSequence(java.lang.CharSequence,kotlin.ranges.IntRange)
     private static final java.lang.CharSequence subSequence(java.lang.String,int,int)
     private static final java.lang.String substring(java.lang.CharSequence,int,int)
@@ -25070,7 +24947,34 @@ org.lineageos.sleepaudio.databinding.ActivityAboutBinding
 org.lineageos.sleepaudio.databinding.ActivityBackupRestoreBinding
 org.lineageos.sleepaudio.databinding.ActivityEqualizerBinding
 org.lineageos.sleepaudio.databinding.ActivityMainBinding
+org.lineageos.sleepaudio.databinding.ActivityPresetsBinding
 org.lineageos.sleepaudio.databinding.ItemEqBandBinding
+org.lineageos.sleepaudio.databinding.ItemPresetBinding
+org.lineageos.sleepaudio.presets.Preset:
+    public final java.lang.String component1()
+    public final boolean component10()
+    public final int component11()
+    public final int[] component12()
+    public final boolean component13()
+    public final int component14()
+    public final boolean component15()
+    public final int component16()
+    public final int component17()
+    public final int component18()
+    public final int component19()
+    public final boolean component2()
+    public final boolean component3()
+    public final boolean component4()
+    public final int component5()
+    public final boolean component6()
+    public final int component7()
+    public final boolean component8()
+    public final int component9()
+    public final org.lineageos.sleepaudio.presets.Preset copy(java.lang.String,boolean,boolean,boolean,int,boolean,int,boolean,int,boolean,int,int[],boolean,int,boolean,int,int,int,int)
+    public static synthetic org.lineageos.sleepaudio.presets.Preset copy$default(org.lineageos.sleepaudio.presets.Preset,java.lang.String,boolean,boolean,boolean,int,boolean,int,boolean,int,boolean,int,int[],boolean,int,boolean,int,int,int,int,int,java.lang.Object)
+org.lineageos.sleepaudio.presets.PresetManager:
+    private static final java.lang.String PREF_CURRENT_PRESET
+    private static final java.lang.String PREF_CUSTOM_PREFIX
 org.lineageos.sleepaudio.service.SleepAudioController:
     public static final int CHANNEL_COUNT
     public static final java.lang.String TAG
@@ -25824,7 +25728,7 @@ androidx.appcompat.app.AppCompatViewInflater:
 androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor:
     public static synthetic void lambda$execute$0()
 androidx.appcompat.app.AppLocalesStorageHelper
-androidx.appcompat.app.LayoutIncludeDetector$$InternalSyntheticThrowCCEIfNotNull$146$6a60655590ef65d84a2da838c467ba5f76e510e853d56a4244bfdd8f00a79a92$0
+androidx.appcompat.app.LayoutIncludeDetector$$InternalSyntheticThrowCCEIfNotNull$154$6a60655590ef65d84a2da838c467ba5f76e510e853d56a4244bfdd8f00a79a92$0
 androidx.appcompat.app.LayoutIncludeDetector:
     public void <init>(android.net.Uri,android.content.ClipDescription,android.net.Uri,int)
     public final void add$1()
@@ -26051,6 +25955,7 @@ androidx.appcompat.view.SupportActionModeWrapper$CallbackWrapper:
     public final void addNode(android.view.View)
     public final void areContentsTheSame(int,int)
     public final void areItemsTheSame(int,int)
+    public static void cancel()
     public static boolean cancelSnackbarLocked()
     public static void clear()
     public static void constructIndex()
@@ -26072,11 +25977,14 @@ androidx.appcompat.view.SupportActionModeWrapper$CallbackWrapper:
     public static void handleTimeout()
     public static boolean hasOutgoingEdges()
     public final void isCurrentSnackbarLocked()
+    public static void jumpToCurrentState()
     public static void pauseTimeout()
     public static void poolList()
     public static void put()
     public static void restoreTimeoutIfPaused()
     public static void scheduleTimeoutLocked()
+    public static void setState()
+    public static void start()
 androidx.appcompat.view.SupportMenuInflater$MenuState:
     public java.lang.String itemActionProviderClassName
     public static void addItem()
@@ -26285,7 +26193,6 @@ androidx.appcompat.widget.ActionBarContextView:
     public static int positionChild$androidx$appcompat$widget$AbsActionBarView()
     public static androidx.core.view.ViewPropertyAnimatorCompat setupAnimatorToVisibility$androidx$appcompat$widget$AbsActionBarView()
     public final void showOverflowMenu()
-androidx.appcompat.widget.ActionBarOverlayLayout$1$$InternalSyntheticThrowCCEIfNotNull$8$bbfa95d0286d59eb8842b7182aca184bda982df391952f8d4c56a965662f5e97$0
 androidx.appcompat.widget.ActionBarOverlayLayout$1$$InternalSyntheticThrowCCEIfNotNull$8$bbfa95d0286d59eb8842b7182aca184bda982df391952f8d4c56a965662f5e97$1
 androidx.appcompat.widget.ActionBarOverlayLayout$3
 androidx.appcompat.widget.ActionBarOverlayLayout$ActionBarVisibilityCallback:
@@ -26318,8 +26225,8 @@ androidx.appcompat.widget.ActionBarOverlayLayout:
     public final boolean showOverflowMenu()
 androidx.appcompat.widget.ActionMenuPresenter$ActionMenuPopupCallback:
     public final androidx.appcompat.view.menu.ShowableListMenu getPopup()
-androidx.appcompat.widget.ActionMenuPresenter$OpenOverflowRunnable$$InternalSyntheticThrowCCEIfNotNull$154$c72c160e66c85419029c51f458ecca7db3d52d5ca0a4f409f693619c1053893d$0
-androidx.appcompat.widget.ActionMenuPresenter$OpenOverflowRunnable$$InternalSyntheticThrowCCEIfNotNull$154$c72c160e66c85419029c51f458ecca7db3d52d5ca0a4f409f693619c1053893d$1
+androidx.appcompat.widget.ActionMenuPresenter$OpenOverflowRunnable$$InternalSyntheticThrowCCEIfNotNull$162$c72c160e66c85419029c51f458ecca7db3d52d5ca0a4f409f693619c1053893d$0
+androidx.appcompat.widget.ActionMenuPresenter$OpenOverflowRunnable$$InternalSyntheticThrowCCEIfNotNull$162$c72c160e66c85419029c51f458ecca7db3d52d5ca0a4f409f693619c1053893d$1
 androidx.appcompat.widget.ActionMenuPresenter$OpenOverflowRunnable:
     public synthetic void <init>(java.lang.Object,java.lang.Object)
 androidx.appcompat.widget.ActionMenuPresenter$OverflowPopup
@@ -26425,7 +26332,6 @@ androidx.appcompat.widget.AppCompatDrawableManager$1:
     public static boolean tintDrawableUsingColorFilter()
 androidx.appcompat.widget.AppCompatDrawableManager:
     public final synchronized android.graphics.drawable.Drawable getDrawable()
-    public static synchronized android.graphics.PorterDuffColorFilter getPorterDuffColorFilter(int,android.graphics.PorterDuff$Mode)
     public final synchronized android.content.res.ColorStateList getTintList(android.content.Context,int)
     public final synchronized void onConfigurationChanged()
 androidx.appcompat.widget.AppCompatEditText$SuperCaller:
@@ -26443,8 +26349,10 @@ androidx.appcompat.widget.AppCompatEmojiEditTextHelper:
     public static androidx.core.graphics.Insets getUpperBound()
     public final boolean getUseCompatPadding()
     public static boolean isEmojiCapableKeyListener()
+    public final void onHidden()
     public static void onOffsetChanged()
     public static boolean onPreferenceClick()
+    public final void onShown()
     public final void onTypefaceRequestFailed()
     public final void onTypefaceRetrieved()
     public final void setCardBackground(android.graphics.drawable.Drawable)
@@ -26465,7 +26373,6 @@ androidx.appcompat.widget.AppCompatImageHelper:
     public final android.graphics.PorterDuff$Mode getSupportImageTintMode()
     public final boolean hasOverlappingRendering()
     public static void obtainLevelFromDrawable()
-    public final void setImageResource(int)
     public final void setSupportImageTintList(android.content.res.ColorStateList)
     public final void setSupportImageTintMode(android.graphics.PorterDuff$Mode)
     public static boolean shouldApplyFrameworkTintUsingColorFilter()
@@ -26804,7 +26711,6 @@ androidx.appcompat.widget.RtlSpacingHelper:
 androidx.appcompat.widget.ScrollingTabContainerView:
     public abstract void setAllowCollapse()
 androidx.appcompat.widget.SearchView$2
-androidx.appcompat.widget.SearchView$4$$InternalSyntheticThrowCCEIfNotNull$19$ba273122473074571c2b87348b58e4744fcb8dd05cc9a2d0c6151c4e3151e81b$1
 androidx.appcompat.widget.SearchView$9
 androidx.appcompat.widget.SearchView$OnCloseListener:
     public abstract boolean onClose()
@@ -26825,6 +26731,7 @@ androidx.appcompat.widget.SearchView$SavedState$1:
     public static com.google.android.material.button.MaterialButton$SavedState createFromParcel()
     public static com.google.android.material.internal.CheckableImageButton$SavedState createFromParcel()
     public static com.google.android.material.sidesheet.SideSheetBehavior$SavedState createFromParcel()
+    public static com.google.android.material.stateful.ExtendableSavedState createFromParcel()
     public static com.google.android.material.textfield.TextInputLayout$SavedState createFromParcel()
     public static void createFromParcel(android.os.Parcel,java.lang.ClassLoader)
     public static androidx.appcompat.widget.SearchView$SavedState createFromParcel$1()
@@ -26835,6 +26742,7 @@ androidx.appcompat.widget.SearchView$SavedState$1:
     public static com.google.android.material.button.MaterialButton$SavedState createFromParcel$1()
     public static com.google.android.material.internal.CheckableImageButton$SavedState createFromParcel$1()
     public static com.google.android.material.sidesheet.SideSheetBehavior$SavedState createFromParcel$1()
+    public static com.google.android.material.stateful.ExtendableSavedState createFromParcel$1()
     public static com.google.android.material.textfield.TextInputLayout$SavedState createFromParcel$1()
     public static androidx.appcompat.widget.SearchView$SavedState[] newArray()
     public static androidx.appcompat.widget.Toolbar$SavedState[] newArray()
@@ -26845,6 +26753,7 @@ androidx.appcompat.widget.SearchView$SavedState$1:
     public static com.google.android.material.button.MaterialButton$SavedState[] newArray()
     public static com.google.android.material.internal.CheckableImageButton$SavedState[] newArray()
     public static com.google.android.material.sidesheet.SideSheetBehavior$SavedState[] newArray()
+    public static com.google.android.material.stateful.ExtendableSavedState[] newArray()
     public static com.google.android.material.textfield.TextInputLayout$SavedState[] newArray()
 androidx.appcompat.widget.SearchView$SearchAutoComplete:
     public final void ensureImeVisible()
@@ -27098,6 +27007,7 @@ androidx.arch.core.internal.SafeIterableMap:
     public final androidx.arch.core.internal.SafeIterableMap$Entry put(java.lang.Object,java.lang.Object)
     public java.lang.Object putIfAbsent(java.lang.Object,java.lang.Object)
     public static int size()
+androidx.cardview.R$attr
 androidx.cardview.R$color
 androidx.cardview.R$dimen
 androidx.cardview.R$style
@@ -27121,7 +27031,7 @@ androidx.cardview.widget.CardView:
     public int mUserSetMinWidth
     public static synthetic void access$101(androidx.cardview.widget.CardView,int)
     public static synthetic void access$201(androidx.cardview.widget.CardView,int)
-    public abstract void setContentPadding()
+    public static void setContentPadding()
 androidx.cardview.widget.CardViewApi17Impl$1
 androidx.cardview.widget.CardViewApi17Impl
 androidx.cardview.widget.CardViewApi21Impl:
@@ -28145,7 +28055,6 @@ androidx.coordinatorlayout.widget.CoordinatorLayout:
     public android.graphics.Paint mScrimPaint
     public static void addPreDrawListener()
     public static androidx.core.view.WindowInsetsCompat dispatchApplyWindowInsetsToBehaviors()
-    public static void dispatchDependentViewsChanged()
     public static void ensurePreDrawListener()
     public static androidx.coordinatorlayout.widget.CoordinatorLayout$LayoutParams generateDefaultLayoutParams()
     public static androidx.coordinatorlayout.widget.CoordinatorLayout$LayoutParams generateLayoutParams()
@@ -28451,7 +28360,7 @@ androidx.core.os.LocaleListCompat:
     public final int size()
     public final java.lang.String toLanguageTags()
     public static androidx.core.os.LocaleListCompat wrap(android.os.LocaleList)
-androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$201$dd0d3399d7d164768be69e26cdc88e49809bc46afb623c060d951b7b929d77ad$0
+androidx.core.os.LocaleListCompatWrapper$$InternalSyntheticThrowCCEIfNotNull$209$dd0d3399d7d164768be69e26cdc88e49809bc46afb623c060d951b7b929d77ad$0
 androidx.core.os.LocaleListCompatWrapper
 androidx.core.os.LocaleListInterface:
     public abstract java.util.Locale get()
@@ -28488,7 +28397,15 @@ androidx.core.provider.FontsContractCompat
 androidx.core.provider.RequestExecutor$ReplyRunnable$1
 androidx.core.provider.RequestExecutor$ReplyRunnable
 androidx.core.provider.RequestExecutor
-androidx.core.text.BidiFormatter$Builder
+androidx.core.text.BidiFormatter$Builder:
+    public static androidx.core.text.BidiFormatter build()
+    public static void dispatchExpandedStateChanged()
+    public static int getExpandedComponentIdHint()
+    public static void initialize()
+    public static boolean isExpanded()
+    public static void onRestoreInstanceState()
+    public static android.os.Bundle onSaveInstanceState()
+    public static void setExpandedComponentIdHint()
 androidx.core.text.BidiFormatter$DirectionalityEstimator:
     public final boolean isHtml
     public static byte dirTypeForward()
@@ -30693,7 +30610,7 @@ androidx.recyclerview.widget.DefaultItemAnimator:
     public final boolean canReuseUpdatedViewHolder()
     public final boolean canReuseUpdatedViewHolder$1()
     public static boolean canReuseUpdatedViewHolder$androidx$recyclerview$widget$SimpleItemAnimator()
-    public static void dispatchAddFinished()
+    public final void dispatchAddFinished(androidx.recyclerview.widget.RecyclerView$ViewHolder)
     public static void dispatchAddFinished$androidx$recyclerview$widget$SimpleItemAnimator()
     public static synthetic bridge void dispatchAddStarting()
     public static void dispatchAddStarting$androidx$recyclerview$widget$SimpleItemAnimator()
@@ -31433,8 +31350,10 @@ androidx.transition.AutoTransition:
     public static void init()
 androidx.transition.ChangeBounds$10
 androidx.transition.ChangeBounds$1:
+    public static android.graphics.Matrix get()
     public static android.graphics.PointF get()
     public static void set()
+    public static void set$1()
 androidx.transition.ChangeBounds$2
 androidx.transition.ChangeBounds$3
 androidx.transition.ChangeBounds$4
@@ -31606,7 +31525,7 @@ androidx.transition.ViewUtilsBase
 androidx.transition.Visibility$DisappearListener:
     public final void hideViewWhenNotCanceled()
 androidx.transition.Visibility
-androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$201$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
+androidx.transition.WindowIdApi14$$InternalSyntheticThrowCCEIfNotNull$209$346ba31081d848221d10738ffacfe8b42a1cf2bcc44a47580e10fd7ecc1dfab1$0
 androidx.transition.WindowIdApi14
 androidx.vectordrawable.graphics.drawable.AndroidResources:
     public static final int[] STYLEABLE_ANIMATOR
@@ -31621,6 +31540,8 @@ androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$2
 androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$AnimatedVectorDrawableCompatState:
     public int mChangingConfigurations
     public final void setupAnimatorSet()
+androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$AnimatedVectorDrawableDelegateState:
+    private static int getChangingConfigurations$com$google$android$material$floatingactionbutton$BorderDrawable$BorderState()
 androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat:
     public android.animation.ArgbEvaluator mArgbEvaluator
     public androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat$AnimatedVectorDrawableDelegateState mCachedConstantStateDelegate
@@ -31755,6 +31676,8 @@ androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer:
     public static float lerp(float,float,float)
     public static int maxValue(int[])
     public static int[] mergeIconState(com.google.android.material.textfield.TextInputLayout,com.google.android.material.internal.CheckableImageButton)
+    public abstract void onHidden()
+    public abstract void onShown()
     public static int resolveColor(android.content.Context,android.util.TypedValue)
     public static void setElevation(android.view.View,float)
     public static void setIconMinSize(com.google.android.material.internal.CheckableImageButton,int)
@@ -31927,8 +31850,22 @@ com.google.android.material.R$styleable:
     public static int[] ExtendedFloatingActionButton
     public static int ExtendedFloatingActionButton_Behavior_Layout_behavior_autoHide
     public static int ExtendedFloatingActionButton_Behavior_Layout_behavior_autoShrink
-    public static int[] FloatingActionButton
     public static int FloatingActionButton_Behavior_Layout_behavior_autoHide
+    public static int FloatingActionButton_android_enabled
+    public static int FloatingActionButton_backgroundTint
+    public static int FloatingActionButton_backgroundTintMode
+    public static int FloatingActionButton_borderWidth
+    public static int FloatingActionButton_elevation
+    public static int FloatingActionButton_ensureMinTouchTargetSize
+    public static int FloatingActionButton_fabCustomSize
+    public static int FloatingActionButton_fabSize
+    public static int FloatingActionButton_hideMotionSpec
+    public static int FloatingActionButton_hoveredFocusedTranslationZ
+    public static int FloatingActionButton_maxImageSize
+    public static int FloatingActionButton_pressedTranslationZ
+    public static int FloatingActionButton_rippleColor
+    public static int FloatingActionButton_showMotionSpec
+    public static int FloatingActionButton_useCompatPadding
     public static int[] FlowLayout
     public static int[] FontFamily
     public static int[] FontFamilyFont
@@ -32206,23 +32143,27 @@ com.google.android.material.R$styleable:
     public static int[] ViewStubCompat
 com.google.android.material.animation.AnimatorSetCompat
 com.google.android.material.animation.ArgbEvaluatorCompat
-com.google.android.material.animation.ChildrenAlphaProperty
+com.google.android.material.animation.ChildrenAlphaProperty:
+    public static java.lang.Float get()
+    public static void set()
 com.google.android.material.animation.DrawableAlphaProperty
+com.google.android.material.animation.ImageMatrixProperty
+com.google.android.material.animation.MatrixEvaluator
 com.google.android.material.animation.MotionSpec:
-    public static com.google.android.material.animation.MotionSpec createFromAttribute(android.content.Context,android.content.res.TypedArray,int)
-    public final com.google.android.material.animation.MotionTiming getTiming(java.lang.String)
     public static long getTotalDuration()
     public static boolean hasTiming()
     public static void setPropertyValues()
     public static void setTiming()
 com.google.android.material.animation.MotionTiming:
-    public void <init>(long)
-    public final void apply(android.animation.ObjectAnimator)
     public static long getDelay()
     public static long getDuration()
     public static int getRepeatCount()
     public static int getRepeatMode()
-com.google.android.material.animation.Positioning
+com.google.android.material.animation.Positioning:
+    public final int gravity
+    public final float xAdjustment
+    public final float yAdjustment
+    public void <init>()
 com.google.android.material.animation.TransformationCallback
 com.google.android.material.appbar.AppBarLayout$$InternalSyntheticLambda$1$6fdf0d613a93346b5c80a2aeb382ac8e451e7029141b5a67c1f3e062033b8aa2$0
 com.google.android.material.appbar.AppBarLayout$1
@@ -32400,7 +32341,6 @@ com.google.android.material.behavior.SwipeDismissBehavior:
     public static void setStartAlphaSwipeDistance()
     public static void setSwipeDirection()
     public static void updateAccessibilityActions()
-com.google.android.material.bottomappbar.BottomAppBar$$InternalSyntheticThrowCCEIfNotNull$7$cfe930bec73548938692edc549e97894fea21ba06ff0de11a317a7f1d76a096d$0
 com.google.android.material.bottomappbar.BottomAppBar$$InternalSyntheticThrowCCEIfNotNull$8$80c7bf37d9fa2ac713acf944142082058ed9697c2c9f84e0d61256d07ccab389$0
 com.google.android.material.bottomappbar.BottomAppBar$9
 com.google.android.material.bottomappbar.BottomAppBar$Behavior$1
@@ -32618,7 +32558,7 @@ com.google.android.material.carousel.Arrangement
 com.google.android.material.carousel.Carousel
 com.google.android.material.carousel.CarouselLayoutManager$$InternalSyntheticLambda$1$fc583b889c18a289c690fb7099cae881be2922f09eebf72ab42aa12a903ef5aa$0
 com.google.android.material.carousel.CarouselLayoutManager$$InternalSyntheticLambda$2$5b3cd3f2363bbf6dfb26c125a0d027b2b230878b3b1338036a5c5c692bf44f54$0
-com.google.android.material.carousel.CarouselLayoutManager$$InternalSyntheticThrowCCEIfNotNull$18$c98532208d7f4e1d026df67a7967bbb09063f17592135b08c04eca722cb5bd68$0
+com.google.android.material.carousel.CarouselLayoutManager$$InternalSyntheticThrowCCEIfNotNull$17$c98532208d7f4e1d026df67a7967bbb09063f17592135b08c04eca722cb5bd68$0
 com.google.android.material.carousel.CarouselLayoutManager$1
 com.google.android.material.carousel.CarouselLayoutManager$ChildCalculations
 com.google.android.material.carousel.CarouselLayoutManager$DebugItemDecoration:
@@ -32685,7 +32625,7 @@ com.google.android.material.carousel.CarouselLayoutManager:
     public static void updateChildMaskForLocation()
     public final void updateCurrentKeylineStateForScrollOffset(com.google.android.material.carousel.KeylineStateList)
     public final void updateItemCount()
-    public static void validateChildOrderIfDebugging()
+    public final void validateChildOrderIfDebugging()
 com.google.android.material.carousel.CarouselOrientationHelper$1:
     public final void containMaskWithinBounds()
     public final float getMaskMargins()
@@ -33088,13 +33028,26 @@ com.google.android.material.elevation.ElevationOverlayProvider:
     public static int compositeOverlayWithThemeSurfaceColorIfNeeded()
     public static boolean isThemeElevationOverlayEnabled()
     public static boolean isThemeSurfaceColor()
-com.google.android.material.expandable.ExpandableWidget
+com.google.android.material.expandable.ExpandableWidget:
+    public abstract boolean isExpanded()
+com.google.android.material.expandable.ExpandableWidgetHelper
+com.google.android.material.floatingactionbutton.BorderDrawable$1
+com.google.android.material.floatingactionbutton.BorderDrawable$BorderState
+com.google.android.material.floatingactionbutton.BorderDrawable:
+    public static android.graphics.Shader createGradientShader()
+    public final android.graphics.RectF getBoundsAsRectF()
+    public final void setBorderTint(android.content.res.ColorStateList)
+    public static void setBorderWidth()
+    public static void setGradientColors()
+    public static void setShapeAppearanceModel()
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$5$$InternalSyntheticThrowCCEIfNotNull$7$3f5b10c8d5580e5745e9b571bd61b75b26179609e133b7fbfc31cd6575e98681$0
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$5$$InternalSyntheticThrowCCEIfNotNull$7$6c4510b2847ce3c3390de10fde4291c8fa652a20eac239d92788a4476d96a0aa$0
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$5$$InternalSyntheticThrowCCEIfNotNull$7$6c4510b2847ce3c3390de10fde4291c8fa652a20eac239d92788a4476d96a0aa$1
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$5$$InternalSyntheticThrowCCEIfNotNull$7$6c4510b2847ce3c3390de10fde4291c8fa652a20eac239d92788a4476d96a0aa$2
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$5$$InternalSyntheticThrowCCEIfNotNull$7$c0cb4ad33b0f2133b14a05cca89d49bb24404b91fdb3f7bbd24a60f05c4d9b06$0
-com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$5
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$5:
+    public final synthetic int $r8$classId
+    public final synthetic java.lang.Object this$0
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$6
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$7
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$8
@@ -33116,20 +33069,110 @@ com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$Ex
     public static boolean updateFabVisibilityForBottomSheet()
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+com.google.android.material.floatingactionbutton.FloatingActionButton$1
 com.google.android.material.floatingactionbutton.FloatingActionButton$BaseBehavior:
-    public boolean autoHideEnabled
     public androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer internalAutoHideListener
-    public android.graphics.Rect tmpRect
     public static boolean getInsetDodgeRect$1()
     public static boolean isBottomSheet(android.view.View)
     public static void offsetIfNeeded()
     public static boolean onDependentViewChanged$1()
     public static boolean onLayoutChild$3()
-    public static boolean shouldUpdateVisibility$1()
-    public static boolean updateFabVisibilityForAppBarLayout$1()
-    public static boolean updateFabVisibilityForBottomSheet$1()
+    public final boolean shouldUpdateVisibility(android.view.View,com.google.android.material.floatingactionbutton.FloatingActionButton)
 com.google.android.material.floatingactionbutton.FloatingActionButton$OnVisibilityChangedListener
-com.google.android.material.floatingactionbutton.FloatingActionButton
+com.google.android.material.floatingactionbutton.FloatingActionButton$ShadowDelegateImpl:
+    public static boolean canSwipeDismissView()
+    public final boolean isCompatPaddingEnabled()
+    public static void onCornerPathCreated()
+    public static void onEdgePathCreated()
+    public static void onInterceptTouchEvent()
+    public final void setBackgroundDrawable(android.graphics.drawable.Drawable)
+    public static void setShadowPadding()
+com.google.android.material.floatingactionbutton.FloatingActionButton$TransformationCallbackWrapper:
+    public final com.google.android.material.animation.TransformationCallback listener
+    public final synthetic com.google.android.material.floatingactionbutton.FloatingActionButton this$0
+    public void <init>(com.google.android.material.floatingactionbutton.FloatingActionButton)
+    public final boolean equals(java.lang.Object)
+    public final int hashCode()
+    public static void onScaleChanged()
+    public static void onTranslationChanged()
+com.google.android.material.floatingactionbutton.FloatingActionButton:
+    public static final int DEF_STYLE_RES
+    public int borderWidth
+    static void <clinit>()
+    public final void addOnHideAnimationListener()
+    public final void addOnShowAnimationListener(androidx.appcompat.widget.ActionBarOverlayLayout$1)
+    public final void addTransformationCallback()
+    public static com.google.android.material.floatingactionbutton.FloatingActionButtonImpl createImpl()
+    public static boolean getContentRect()
+    public final void getMeasuredContentRect(android.graphics.Rect)
+    public static void getTouchTargetRect()
+    public final boolean isExpanded()
+    public static boolean isOrWillBeShown$1()
+    public final void offsetRectWithShadow(android.graphics.Rect)
+    public static androidx.appcompat.widget.AppCompatEmojiEditTextHelper wrapOnVisibilityChangedListener()
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$3:
+    public static android.graphics.Matrix evaluate()
+    public static android.graphics.Matrix evaluate$com$google$android$material$animation$MatrixEvaluator()
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$5
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$6
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$DisabledElevationAnimation:
+    public final float getTargetShadowSize()
+    private static float getTargetShadowSize$com$google$android$material$floatingactionbutton$FloatingActionButtonImpl$DisabledElevationAnimation()
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ElevateToHoveredFocusedTranslationZAnimation
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ElevateToPressedTranslationZAnimation
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$InternalTransformationCallback
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$InternalVisibilityChangedListener
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ResetElevationAnimation
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ShadowAnimatorImpl:
+    public abstract float getTargetShadowSize()
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl:
+    public java.util.ArrayList hideListeners
+    public java.util.ArrayList showListeners
+    public final androidx.appcompat.view.SupportActionModeWrapper$CallbackWrapper stateListAnimator
+    public java.util.ArrayList transformationCallbacks
+    public static void addOnHideAnimationListener()
+    public static void addOnShowAnimationListener()
+    public static void addTransformationCallback()
+    public com.google.android.material.shape.MaterialShapeDrawable createShapeDrawable()
+    public static android.graphics.drawable.Drawable getContentBackground()
+    public static boolean getEnsureMinTouchTargetSize()
+    public static com.google.android.material.animation.MotionSpec getHideMotionSpec()
+    public static float getHoveredFocusedTranslationZ()
+    public static android.view.ViewTreeObserver$OnPreDrawListener getOrCreatePreDrawListener()
+    public static float getPressedTranslationZ()
+    public static com.google.android.material.shape.ShapeAppearanceModel getShapeAppearance()
+    public static com.google.android.material.animation.MotionSpec getShowMotionSpec()
+    public final int getTouchTargetPadding()
+    public static void hide()
+    public static boolean isOrWillBeHidden()
+    public final boolean isOrWillBeShown()
+    public static void onAttachedToWindow()
+    public static void onDetachedFromWindow()
+    public static void onPaddingUpdated()
+    public static void onPreDraw()
+    public final void onScaleChanged()
+    public static boolean requirePreDrawListener()
+    public static void setBackgroundTintList()
+    public static void setBackgroundTintMode()
+    public final void setElevation(float)
+    public static void setEnsureMinTouchTargetSize()
+    public static void setHideMotionSpec()
+    public final void setHoveredFocusedTranslationZ(float)
+    public final void setImageMatrixScale(float)
+    public static void setMaxImageSize()
+    public static void setMinTouchTargetSize()
+    public final void setPressedTranslationZ(float)
+    public static void setShadowPaddingEnabled()
+    public static void setShowMotionSpec()
+    public final boolean shouldAnimateVisibilityChange()
+    public final boolean shouldExpandBoundsForA11y()
+    public static void show()
+    public final void updateImageMatrixScale()
+    public final void updateShapeElevation(float)
+    public static void workAroundOreoBug()
+com.google.android.material.floatingactionbutton.FloatingActionButtonImplLollipop:
+    public static com.google.android.material.floatingactionbutton.BorderDrawable createBorderDrawable()
+    public static android.animation.StateListAnimator createDefaultStateListAnimator()
 com.google.android.material.floatingactionbutton.MotionStrategy
 com.google.android.material.internal.CheckableImageButton$1
 com.google.android.material.internal.CheckableImageButton$SavedState$1
@@ -33237,6 +33280,11 @@ com.google.android.material.internal.NavigationMenuItemView:
     public static android.graphics.drawable.StateListDrawable createDefaultBackground()
     public final boolean prefersCondensedTitle()
     public static boolean shouldExpandActionArea()
+com.google.android.material.internal.StateListAnimator$1
+com.google.android.material.internal.StateListAnimator$Tuple:
+    public final android.animation.ValueAnimator animator
+    public final int[] specs
+com.google.android.material.internal.StateListAnimator
 com.google.android.material.internal.StaticLayoutBuilderCompat$StaticLayoutBuilderCompatException:
     public void <init>(java.lang.Exception)
 com.google.android.material.internal.StaticLayoutBuilderCompat:
@@ -33279,7 +33327,6 @@ com.google.android.material.internal.ViewUtils$2
 com.google.android.material.internal.ViewUtils$OnApplyWindowInsetsListener
 com.google.android.material.internal.ViewUtils$RelativePadding
 com.google.android.material.internal.ViewUtils
-com.google.android.material.internal.VisibilityAwareImageButton
 com.google.android.material.math.MathUtils
 com.google.android.material.motion.MaterialBackAnimationHelper
 com.google.android.material.motion.MaterialBottomContainerBackHelper
@@ -33325,7 +33372,6 @@ com.google.android.material.ripple.RippleUtils:
     public static final int[] SELECTED_STATE_SET
     public static final boolean USE_FRAMEWORK_RIPPLE
     static void <clinit>()
-    public static android.content.res.ColorStateList sanitizeRippleDrawableColor(android.content.res.ColorStateList)
 com.google.android.material.search.SearchBar$ScrollingViewBehavior:
     public static void setAppBarLayoutTransparent()
 com.google.android.material.search.SearchBar
@@ -33337,6 +33383,7 @@ com.google.android.material.shadow.ShadowRenderer:
     public static void drawCornerShadow()
     public static void drawEdgeShadow()
     public static android.graphics.Paint getShadowPaint()
+com.google.android.material.shadow.ShadowViewDelegate
 com.google.android.material.shape.CornerTreatment
 com.google.android.material.shape.CutCornerTreatment:
     public float size
@@ -33373,11 +33420,7 @@ com.google.android.material.shape.EdgeTreatment:
     public static int size$1()
     public static void unregisterObserver()
     public final void updateEditorInfoAttrs(android.view.inputmethod.EditorInfo)
-com.google.android.material.shape.MaterialShapeDrawable$1:
-    public static boolean canSwipeDismissView()
-    public static void onCornerPathCreated()
-    public static void onEdgePathCreated()
-    public static void onInterceptTouchEvent()
+com.google.android.material.shape.MaterialShapeDrawable$1
 com.google.android.material.shape.MaterialShapeDrawable$2
 com.google.android.material.shape.MaterialShapeDrawable$MaterialShapeDrawableState:
     public android.graphics.ColorFilter colorFilter
@@ -33416,6 +33459,7 @@ com.google.android.material.shape.MaterialShapeDrawable:
     public final void setPadding(int,int,int,int)
     public static void setParentAbsoluteElevation()
     public static void setShadowBitmapDrawingEnable()
+    public final void setShadowCompatRotation(int)
     public final void setStroke(float,android.content.res.ColorStateList)
     public final void setStroke(int,float)
     public final void setStrokeColor(android.content.res.ColorStateList)
@@ -33445,8 +33489,7 @@ com.google.android.material.shape.ShapeAppearanceModel$Builder:
     public final void setTopRightCornerSize(float)
 com.google.android.material.shape.ShapeAppearanceModel$CornerSizeUnaryOperator
 com.google.android.material.shape.ShapeAppearanceModel:
-    public static final com.google.android.material.shape.CornerSize PILL
-    static void <clinit>()
+    public static com.google.android.material.shape.ShapeAppearanceModel$Builder builder(android.content.Context,android.util.AttributeSet,int,int,com.google.android.material.shape.CornerSize)
     public static com.google.android.material.shape.EdgeTreatment getBottomEdge()
     public static androidx.activity.result.ActivityResultLauncher getBottomLeftCorner()
     public static com.google.android.material.shape.CornerSize getBottomLeftCornerSize()
@@ -33619,6 +33662,7 @@ com.google.android.material.snackbar.SnackbarContentLayout:
 com.google.android.material.snackbar.SnackbarManager$Callback
 com.google.android.material.snackbar.SnackbarManager$SnackbarRecord
 com.google.android.material.snackbar.SnackbarManager
+com.google.android.material.stateful.ExtendableSavedState$1
 com.google.android.material.textfield.ClearTextEndIconDelegate$$InternalSyntheticLambda$2$17ccb35e90256e2a790b98fb0f29fcb9f71fa2758edf36e22295aec0d2f06296$0
 com.google.android.material.textfield.ClearTextEndIconDelegate$$InternalSyntheticLambda$2$88b8d40c43e34dcb614afd396cecd928e90873c960f200febc85ef2ae10b66ab$0
 com.google.android.material.textfield.ClearTextEndIconDelegate$$InternalSyntheticLambda$2$b01fc8933ceb300a93c892a20cf8d831db7c88c6a1b23a8fb1a09bdb1b6fc74c$0
@@ -33936,44 +33980,24 @@ com.google.android.material.timepicker.TimePickerView:
     public static synthetic void lambda$new$0()
     public static void setUpDisplay()
     public static void setupDoubleTap()
-com.google.android.material.transformation.ExpandableBehavior$1
 com.google.android.material.transformation.ExpandableBehavior:
-    public int currentState
-    public abstract boolean didStateChange()
+    public final boolean didStateChange(boolean)
     public abstract com.google.android.material.expandable.ExpandableWidget findExpandableWidget()
-    public abstract boolean onExpandedStateChange()
 com.google.android.material.transformation.ExpandableTransformationBehavior$1
-com.google.android.material.transformation.ExpandableTransformationBehavior:
-    public android.animation.AnimatorSet currentAnimation
-    public abstract android.animation.AnimatorSet onCreateExpandedStateChangeAnimation()
-    public abstract boolean onExpandedStateChange()
 com.google.android.material.transformation.FabTransformationBehavior$$InternalSyntheticThrowCCEIfNotNull$15$7ad5756f1f0cf74f7ff03f635c59a8a80c061edecf262a0844da7b5d347693b9$0
-com.google.android.material.transformation.FabTransformationBehavior$$InternalSyntheticThrowCCEIfNotNull$15$9dd32795b6f0a55969d5899d97be04098839973f21163d7817308ac7d2506de2$0
-com.google.android.material.transformation.FabTransformationBehavior$$InternalSyntheticThrowCCEIfNotNull$15$9dd32795b6f0a55969d5899d97be04098839973f21163d7817308ac7d2506de2$1
 com.google.android.material.transformation.FabTransformationBehavior$$InternalSyntheticThrowCCEIfNotNull$15$c0ea533ad1a224b718356b41c743b0a2327e351cb28b8ea332a32afaf9d369e9$0
-com.google.android.material.transformation.FabTransformationBehavior$$InternalSyntheticThrowCCEIfNotNull$7$7f2960db078b6a9540f9b545be06af94ba11085ff489c1da085fba495ed3c366$0
+com.google.android.material.transformation.FabTransformationBehavior$$InternalSyntheticThrowCCEIfNotNull$30$9dd32795b6f0a55969d5899d97be04098839973f21163d7817308ac7d2506de2$0
 com.google.android.material.transformation.FabTransformationBehavior$1
 com.google.android.material.transformation.FabTransformationBehavior$2
 com.google.android.material.transformation.FabTransformationBehavior$3
 com.google.android.material.transformation.FabTransformationBehavior$4
 com.google.android.material.transformation.FabTransformationBehavior$FabTransformationSpec
 com.google.android.material.transformation.FabTransformationBehavior:
-    public float dependencyOriginalTranslationX
-    public float dependencyOriginalTranslationY
-    public final int[] tmpArray
-    public final android.graphics.Rect tmpRect
-    public final android.graphics.RectF tmpRectF1
-    public final android.graphics.RectF tmpRectF2
     public abstract android.view.ViewGroup calculateChildContentContainer()
     public abstract void calculateChildVisibleBoundsAtEndOfExpansion()
-    public abstract void calculateDependencyWindowBounds()
-    public abstract android.util.Pair calculateMotionTiming()
+    public final void calculateDependencyWindowBounds(android.view.View,android.graphics.RectF)
     public abstract float calculateRevealCenterX()
     public abstract float calculateRevealCenterY()
-    public abstract float calculateTranslationX()
-    public abstract float calculateTranslationY()
-    public static float calculateValueOfAnimationAtEndOfExpansion(androidx.appcompat.widget.AppCompatEmojiEditTextHelper,com.google.android.material.animation.MotionTiming,float)
-    public abstract void calculateWindowBounds()
     public abstract void createChildrenFadeAnimation()
     public abstract void createColorAnimation()
     public abstract void createDependencyTranslationAnimation()
@@ -33984,31 +34008,17 @@ com.google.android.material.transformation.FabTransformationBehavior:
     public abstract void createPreFillRadialExpansion()
     public abstract void createTranslationAnimation()
     public abstract int getBackgroundTint()
-    public abstract android.animation.AnimatorSet onCreateExpandedStateChangeAnimation()
-    public abstract androidx.appcompat.widget.AppCompatEmojiEditTextHelper onCreateMotionSpec()
     public static android.view.ViewGroup toViewGroupOrNull(android.view.View)
-com.google.android.material.transformation.FabTransformationScrimBehavior$1
+com.google.android.material.transformation.FabTransformationScrimBehavior$1:
+    public final synthetic com.google.android.material.transformation.FabTransformationScrimBehavior this$0
 com.google.android.material.transformation.FabTransformationScrimBehavior:
-    public final com.google.android.material.animation.MotionTiming collapseTiming
-    public final com.google.android.material.animation.MotionTiming expandTiming
     public static void createScrimAnimation()
-    public final android.animation.AnimatorSet onCreateExpandedStateChangeAnimation()
 com.google.android.material.transformation.FabTransformationSheetBehavior:
-    public java.util.HashMap importantForAccessibilityMap
-    public final androidx.appcompat.widget.AppCompatEmojiEditTextHelper onCreateMotionSpec()
-    public final boolean onExpandedStateChange()
     public static void updateImportantForAccessibility()
 com.google.android.material.transformation.TransformationChildCard
 com.google.android.material.transformation.TransformationChildLayout
 com.google.common.util.concurrent.ListenableFuture
-kotlin.ExceptionsKt
-kotlin.ExceptionsKt__ExceptionsKt
-kotlin.Function
-kotlin.KotlinNothingValueException
-kotlin.Lazy
-kotlin.LazyKt
-kotlin.LazyKt__LazyJVMKt
-kotlin.LazyKt__LazyKt:
+kotlin.ExceptionsKt:
     public static void beforeCheckcastToFunctionOfArity(kotlin.jvm.functions.Function2)
     public static int compare(int)
     public static int compareValues(java.lang.Comparable,java.lang.Comparable)
@@ -34024,6 +34034,7 @@ kotlin.LazyKt__LazyKt:
     public static kotlin.coroutines.Continuation intercepted(kotlin.coroutines.Continuation)
     public static kotlin.SynchronizedLazyImpl lazy(androidx.lifecycle.SavedStateHandlesProvider$viewModel$2)
     public static java.util.List listOf(java.lang.Object)
+    public static varargs java.util.List listOf(java.lang.Object[])
     public static kotlin.coroutines.CoroutineContext minusKey(kotlin.coroutines.CoroutineContext$Element,kotlin.coroutines.CoroutineContext$Key)
     public static final int mod(int,int)
     public abstract long nanoTime()
@@ -34037,6 +34048,13 @@ kotlin.LazyKt__LazyKt:
     public abstract void unTrackTask()
     public abstract void unpark()
     public abstract void unregisterTimeLoopThread()
+kotlin.ExceptionsKt__ExceptionsKt
+kotlin.Function
+kotlin.KotlinNothingValueException
+kotlin.Lazy
+kotlin.LazyKt
+kotlin.LazyKt__LazyJVMKt
+kotlin.LazyKt__LazyKt
 kotlin.NoWhenBranchMatchedException
 kotlin.Pair:
     public static java.lang.Object component1()
@@ -34292,10 +34310,11 @@ kotlin.text.StringsKt__StringBuilderJVMKt
 kotlin.text.StringsKt__StringNumberConversionsJVMKt
 kotlin.text.StringsKt__StringsJVMKt
 kotlin.text.StringsKt__StringsKt:
+    public static boolean endsWith$default(java.lang.String,java.lang.String)
     public static final int getLastIndex(java.lang.CharSequence)
     public static final int indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean)
     public static synthetic int indexOf$default(java.lang.CharSequence,java.lang.String)
-    public static final boolean regionMatches(int,int,int,java.lang.String,java.lang.String,boolean)
+    public static final boolean regionMatchesImpl(java.lang.CharSequence,int,java.lang.CharSequence,int,int,boolean)
     public static boolean startsWith$default(java.lang.String,java.lang.String)
     public static java.lang.String substringAfter$default(java.lang.String,java.lang.String)
 kotlin.text.StringsKt___StringsJvmKt
@@ -34304,9 +34323,9 @@ kotlinx.coroutines.AbstractCoroutine
 kotlinx.coroutines.AbstractTimeSource
 kotlinx.coroutines.AbstractTimeSourceKt
 kotlinx.coroutines.BlockingEventLoop
+kotlinx.coroutines.BuildersKt$$InternalSyntheticThrowCCEIfNotNull$82$b8119717a6bf02195919cc99af1f0197727ce5c817620677834a07f1a2dc0db0$0
+kotlinx.coroutines.BuildersKt$$InternalSyntheticThrowCCEIfNotNull$9$56fd72a63705af2568c8d5189862aee64d6d4577239ab3fa3bec18836d4ef2e2$0
 kotlinx.coroutines.BuildersKt
-kotlinx.coroutines.BuildersKt__Builders_commonKt$$InternalSyntheticThrowCCEIfNotNull$82$28d3e5cd7e4a50380bfc136bab79a256cc7831ce6b6446577e1a015da13eeef1$0
-kotlinx.coroutines.BuildersKt__Builders_commonKt$$InternalSyntheticThrowCCEIfNotNull$9$347e63ef30f9e2d7149d62d3b77693f79b1611f27839b02f0107560192450cd1$0
 kotlinx.coroutines.BuildersKt__Builders_commonKt
 kotlinx.coroutines.CancellableContinuation
 kotlinx.coroutines.CancellableContinuationImpl
@@ -34337,7 +34356,7 @@ kotlinx.coroutines.CoroutineExceptionHandlerImplKt$$InternalSyntheticServiceLoad
 kotlinx.coroutines.CoroutineExceptionHandlerImplKt
 kotlinx.coroutines.CoroutineExceptionHandlerKt
 kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$16$f32d3c65e79275cc0e34133ff17172a91084ea4fa58ff765934c26285df444a4$0
-kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$201$a04cd55831796dad4a4038d4eb866607cad4d88ce7c01ff729936a1ef385fb02$0
+kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$209$a04cd55831796dad4a4038d4eb866607cad4d88ce7c01ff729936a1ef385fb02$0
 kotlinx.coroutines.CoroutineId$Key
 kotlinx.coroutines.CoroutineId
 kotlinx.coroutines.CoroutineName$Key
@@ -34504,11 +34523,11 @@ kotlinx.coroutines.internal.Symbol
 kotlinx.coroutines.internal.SystemPropsKt
 kotlinx.coroutines.internal.SystemPropsKt__SystemPropsKt
 kotlinx.coroutines.internal.SystemPropsKt__SystemProps_commonKt
-kotlinx.coroutines.internal.ThreadContextKt$$InternalSyntheticThrowCCEIfNotNull$201$1c3cf37a0d056c7cd7a5d79f764c99997bcbbe09bcd7bd6959a7b9aec0f2a09f$0
-kotlinx.coroutines.internal.ThreadContextKt$$InternalSyntheticThrowCCEIfNotNull$201$8bb36973ff2840e96354ed98611e305825344b00f4fd1bde15eb22ad41326bc6$0
-kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$201$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$0
-kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$201$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$1
-kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$201$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$2
+kotlinx.coroutines.internal.ThreadContextKt$$InternalSyntheticThrowCCEIfNotNull$209$1c3cf37a0d056c7cd7a5d79f764c99997bcbbe09bcd7bd6959a7b9aec0f2a09f$0
+kotlinx.coroutines.internal.ThreadContextKt$$InternalSyntheticThrowCCEIfNotNull$209$8bb36973ff2840e96354ed98611e305825344b00f4fd1bde15eb22ad41326bc6$0
+kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$209$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$0
+kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$209$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$1
+kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$209$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$2
 kotlinx.coroutines.internal.ThreadContextKt$countAll$1
 kotlinx.coroutines.internal.ThreadContextKt$findOne$1
 kotlinx.coroutines.internal.ThreadContextKt$updateState$1
@@ -34546,6 +34565,35 @@ org.lineageos.sleepaudio.R$id
 org.lineageos.sleepaudio.R$layout
 org.lineageos.sleepaudio.R$menu
 org.lineageos.sleepaudio.R$xml
+org.lineageos.sleepaudio.presets.Preset:
+    public static boolean getBassEnabled()
+    public static int getBassStrength()
+    public static int getCompressorAttack()
+    public static boolean getCompressorEnabled()
+    public static int getCompressorRatio()
+    public static int getCompressorRelease()
+    public static int getCompressorThreshold()
+    public static int getDialogueAmount()
+    public static boolean getDialogueEnabled()
+    public static boolean getEnabled()
+    public static int[] getEqBands()
+    public static java.lang.String getName()
+    public static boolean getReverbEnabled()
+    public static int getReverbPreset()
+    public static int getStereoWidening()
+    public static boolean getVirtualizerEnabled()
+    public static int getVirtualizerStrength()
+    public static boolean getVolumeLevelerEnabled()
+    public static boolean isBuiltIn()
+org.lineageos.sleepaudio.presets.PresetManager:
+    public static final org.lineageos.sleepaudio.presets.PresetManager INSTANCE
+    static void <clinit>()
+    public static void applyPreset()
+    public static void deleteCustomPreset()
+    public static org.lineageos.sleepaudio.presets.Preset findPreset()
+    public static java.lang.String getCurrentPreset()
+    public static org.lineageos.sleepaudio.presets.Preset loadCustomPreset()
+    public static void saveCustomPreset()
 org.lineageos.sleepaudio.service.AudioService$$InternalSyntheticLambda$1$9e31c1709fd34c918b1e6ef0d430b4e323fd0f4007fd1f826d6f00a308dc430e$0
 org.lineageos.sleepaudio.service.AudioService:
     public static android.app.Notification createNotification()
@@ -34563,6 +34611,7 @@ org.lineageos.sleepaudio.service.SleepAudioController:
     public static void setVirtualizerStrength()
 org.lineageos.sleepaudio.ui.BackupRestoreActivity$$InternalSyntheticLambda$1$54aaa4fced6a70acded56e92a4712b0f56868855ad4fb058ea3f3c3f1ae23d22$0
 org.lineageos.sleepaudio.ui.BackupRestoreActivity$$InternalSyntheticLambda$1$75a90da7fbbf22e85bce4ab32a99df576be78f3aff59b7d6119b6f462fdc27df$1
+org.lineageos.sleepaudio.ui.BackupRestoreActivity$BackupListAdapter$$InternalSyntheticLambda$2$bca9cb54f800af2264b4fc8f3854f7af8590a83950544000677a2759193d8a58$0
 org.lineageos.sleepaudio.ui.BackupRestoreActivity$BackupListAdapter:
     public static void onBindViewHolder$4()
     public static org.lineageos.sleepaudio.ui.BackupRestoreActivity$BackupViewHolder onCreateViewHolder()
@@ -34583,6 +34632,19 @@ org.lineageos.sleepaudio.ui.EqualizerActivity:
     public static void setupEqualizer()
 org.lineageos.sleepaudio.ui.MainActivity:
     public static void checkRootAccess()
+org.lineageos.sleepaudio.ui.PresetsActivity$$InternalSyntheticLambda$1$9f9425a2029a744aca4c4c786406f2122fca871a14df15cb1b40386854297846$0
+org.lineageos.sleepaudio.ui.PresetsActivity$loadPresets$2
+org.lineageos.sleepaudio.ui.PresetsActivity:
+    public org.lineageos.sleepaudio.ui.PresetsAdapter adapter
+    public static void showSavePresetDialog()
+org.lineageos.sleepaudio.ui.PresetsAdapter$$InternalSyntheticLambda$2$ead50273034d0b0d0f4f79e259d08a9556869b2e47de7a87c9a83c80106148a8$1
+org.lineageos.sleepaudio.ui.PresetsAdapter$PresetViewHolder:
+    public static android.widget.ImageButton getDeleteButton()
+    public static android.widget.TextView getNameText()
+    public static android.widget.TextView getStatusText()
+org.lineageos.sleepaudio.ui.PresetsAdapter:
+    public static void onBindViewHolder$5()
+    public static org.lineageos.sleepaudio.ui.PresetsAdapter$PresetViewHolder onCreateViewHolder()
 org.lineageos.sleepaudio.ui.SleepAudioFragment$$InternalSyntheticLambda$1$dcfcd8c4fd75610520ca6f7a1c824734281b5c9250f698a8a1618c9b5f12b3a8$0
 org.lineageos.sleepaudio.utils.BackupRestoreManager$getBackupFiles$$inlined$sortedByDescending$1
 org.lineageos.sleepaudio.utils.BackupRestoreManager:

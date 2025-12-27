@@ -8,8 +8,16 @@
         "source": "/home/mohammadadi/.gradle/daemon/8.5/org.lineageos.sleepaudio.app-main-41:/layout/activity_main.xml"
     },
     {
-        "merged": "org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/activity_backup_restore.xml",
-        "source": "org.lineageos.sleepaudio.app-main-41:/layout/activity_backup_restore.xml"
+        "merged": "/home/mohammadadi/.gradle/daemon/8.5/org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/activity_backup_restore.xml",
+        "source": "/home/mohammadadi/.gradle/daemon/8.5/org.lineageos.sleepaudio.app-main-41:/layout/activity_backup_restore.xml"
+    },
+    {
+        "merged": "org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/activity_presets.xml",
+        "source": "org.lineageos.sleepaudio.app-main-41:/layout/activity_presets.xml"
+    },
+    {
+        "merged": "org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/item_preset.xml",
+        "source": "org.lineageos.sleepaudio.app-main-41:/layout/item_preset.xml"
     },
     {
         "merged": "/home/mohammadadi/.gradle/daemon/8.5/org.lineageos.sleepaudio.app-mergeReleaseResources-39:/layout/activity_equalizer.xml",

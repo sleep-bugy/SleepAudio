@@ -20,6 +20,9 @@
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        android:maxSdkVersion="32" />
 
     <permission
         android:name="org.lineageos.sleepaudio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -81,6 +84,12 @@
             android:label="Backup &amp; Restore"
             android:parentActivityName="org.lineageos.sleepaudio.ui.MainActivity"
             android:theme="@style/Theme.SleepAudio" />
+        <activity
+            android:name="org.lineageos.sleepaudio.ui.PresetsActivity"
+            android:exported="false"
+            android:label="Audio Presets"
+            android:parentActivityName="org.lineageos.sleepaudio.ui.MainActivity"
+            android:theme="@style/Theme.SleepAudio" />
 
         <receiver
             android:name="org.lineageos.sleepaudio.service.BootReceiver"
@@ -89,6 +98,15 @@
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="org.lineageos.sleepaudio.service.HeadphoneReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED" />
             </intent-filter>
         </receiver>
 

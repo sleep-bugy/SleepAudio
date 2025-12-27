@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/action_presets"
+        android:title="Presets"
+        android:icon="@android:drawable/ic_menu_manage"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_backup_restore"
         android:title="Backup &amp; Restore"
         android:icon="@android:drawable/ic_menu_save"
