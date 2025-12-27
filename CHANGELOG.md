@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1 (2025-12-27)
+
+**Hotfix:**
+- Fixed crash when installed as system app (removed android:persistent flag)
+- App now launches correctly after Magisk/KSU module installation
+
 ## v1.0 (2025-12-27)
 
 Initial release.
