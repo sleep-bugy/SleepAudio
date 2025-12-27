@@ -7,15 +7,15 @@ import org.lineageos.sleepaudio.utils.Constants
 
 class SleepAudioTileService : TileService() {
 
-    override fun onStartListening() {
-        super.onStartListening()
-        updateTile()
-    }
-
     override fun onClick() {
         val prefs = PreferenceManager.getDefaultSharedPreferences(this)
         val state = prefs.getBoolean(Constants.KEY_ENABLE, false)
         prefs.edit().putBoolean(Constants.KEY_ENABLE, !state).apply()
+        updateTile()
+    }
+
+    override fun onStartListening() {
+        super.onStartListening()
         updateTile()
     }
 
@@ -25,6 +25,8 @@ class SleepAudioTileService : TileService() {
         val state = prefs.getBoolean(Constants.KEY_ENABLE, false)
         
         tile.state = if (state) Tile.STATE_ACTIVE else Tile.STATE_INACTIVE
+        tile.label = "SleepAudio"
+        tile.subtitle = if (state) "Active" else "Off"
         tile.updateTile()
     }
 }
