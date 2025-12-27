@@ -1,9 +1,11 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:width="24dp"
-        android:height="24dp"
-        android:viewportWidth="24.0"
-        android:viewportHeight="24.0">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Minimal Moon/Wave Icon (matches launcher) -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M12,3c-4.97,0 -9,4.03 -9,9s4.03,9 9,9 9,-4.03 9,-9c0,-0.46 -0.04,-0.92 -0.1,-1.36a5.02,5.02 0,0 1,-6.36 6.36C12.95,15.87 12.5,15.63 12.11,15.28c-0.6,-0.54 -1.1,-1.19 -1.5,-1.91 -0.4,-0.72 -0.66,-1.51 -0.78,-2.33 -0.12,-0.82 -0.1,-1.67 0.06,-2.48s0.47,-1.58 0.89,-2.28c0.42,-0.7 0.95,-1.31 1.57,-1.82C10.66,3.58 9.32,3.22 8.03,3.31A9.01,9.01 0,0 0,3 12a9,9 0,0 0,9 9 9,9 0,0 0,8.7,-6.7A5.02,5.02 0,0 1,12 3zm0,0"/>
+        android:pathData="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 1,1 4,12A8,8 0 0,1 12,4m-2,4a2,2 0 1,0 0,4 2,2 0 0,0 0,-4m4,0a2,2 0 1,0 0,4 2,2 0 0,0 0,-4"/>
 </vector>

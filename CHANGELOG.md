@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.2 (2025-12-27)
+
+- Updated QS tile icon to match app launcher icon (cleaner minimal design)
+
 ## v1.0.1 (2025-12-27)
 
 **Hotfix:**
