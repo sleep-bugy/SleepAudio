@@ -1,16 +1,17 @@
 package org.lineageos.sleepaudio.ui
 
 import android.os.Bundle
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity
-import com.android.settingslib.collapsingtoolbar.R as CollapsingR
+import androidx.appcompat.app.AppCompatActivity
+import org.lineageos.sleepaudio.R
 
-class MainActivity : CollapsingToolbarBaseActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         
         if (savedInstanceState == null) {
-            fragmentManager.beginTransaction()
-                .replace(CollapsingR.id.content_frame, SleepAudioFragment())
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.content_frame, SleepAudioFragment())
                 .commit()
         }
     }

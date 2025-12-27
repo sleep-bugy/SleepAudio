@@ -1,11 +1,11 @@
 package org.lineageos.sleepaudio.ui
 
 import android.os.Bundle
-import androidx.preference.PreferenceFragment
+import androidx.preference.PreferenceFragmentCompat
 import org.lineageos.sleepaudio.R
 
-class SleepAudioFragment : PreferenceFragment() {
+class SleepAudioFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        addPreferencesFromResource(R.xml.sleep_audio_settings)
+        setPreferencesFromResource(R.xml.sleep_audio_settings, rootKey)
     }
 }

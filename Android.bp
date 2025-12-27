@@ -10,8 +10,8 @@ android_app {
     name: "SleepAudio",
     
     srcs: ["app/src/main/kotlin/**/*.kt"],
-    resource_dirs: ["app/res"],
-    manifest: "app/AndroidManifest.xml",
+    resource_dirs: ["app/src/main/res"],
+    manifest: "app/src/main/AndroidManifest.xml",
     
     certificate: "platform",
     platform_apis: true,
